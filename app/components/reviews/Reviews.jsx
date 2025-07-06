@@ -10,42 +10,42 @@ const Reviews = () => {
   const reviews = [
     {
       id: 1,
-      name: 'Emily Johnson',
-      position: 'CTO, TechStart Inc.',
-      image: '/reviews/user1.jpg', // placeholder
-      review: 'John is an exceptional developer who delivered our project ahead of schedule and exceeded all expectations. His technical skills and problem-solving abilities are truly impressive. He\'s now our go-to developer for all projects.',
+      name: 'Ricardo Calingan',
+      position: 'Project Lead, Cognizant Softvision',
+      image: 'https://media.licdn.com/dms/image/v2/C4E03AQGUuOxPcL6tew/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1618483389283?e=1757548800&v=beta&t=Q7xtQ7CofQyKAQJyGnpzRH1rOU8zIW9sC56HEfYyk3U', // placeholder
+      review: 'I worked with Alfred for about half a year, but I would say that he is one of the great people that I\'ve worked with. He consistently delivers value to the project with high quality and is always up to the challenge. He shows good qualities of a senior developer and is always supporting the team to be able to deliver value.',
       rating: 5,
     },
     {
       id: 2,
-      name: 'Michael Patel',
-      position: 'Product Manager, Digital Solutions',
-      image: '/reviews/user2.jpg', // placeholder
-      review: 'Working with John was a fantastic experience. He took our complex requirements and transformed them into an elegant, user-friendly interface. His attention to detail and commitment to quality are outstanding.',
+      name: 'Jenna Stone',
+      position: 'Program Dev Lead, Cognizant',
+      image: 'https://media.licdn.com/dms/image/v2/C5603AQFgfzlsoCQn5w/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1560178120487?e=1757548800&v=beta&t=Y0K8uqbjVXqizba9KSX4Y_6KLf6nYrpEzsn6CYya3qs',
+      review: 'I worked with Alfred on a React development project for 2 years and would highly recommend working with him as a senior developer. Alfred has extensive technical skills and a broad background of technologies. As a senior developer I relied on him heavily to assist in the refinements and review of pull requests to ensure the code kept our standards and was well written. Alfred is an exceptional communicator and is very friendly. I hope our paths cross again soon.',
       rating: 5,
     },
     {
       id: 3,
-      name: 'Sarah Williams',
-      position: 'Founder, EcoTech',
-      image: '/reviews/user3.jpg', // placeholder
-      review: 'John helped us modernize our outdated systems and implemented new features that greatly improved our user experience. He\'s not only technically proficient but also very communicative and responsive throughout the project.',
+      name: 'Marvin Wenceslao',
+      position: 'Business Analysy/Senior Scrum Master, Yondu Inc',
+      image: 'https://media.licdn.com/dms/image/v2/C5603AQEzRLnuXO7_FQ/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1601958778162?e=1757548800&v=beta&t=EeI-gMm5N83a7pvz9DB0YSA3WHMrCwX2lWnmi8iUjGo',
+      review: 'Alfred is a very hardworking and extremely talented software engineer. I\'ve worked with him in one of our blockchain project. He is very good with software development, in fact, he was hired as a junior developer but take full control of the development as a senior one. It was a pleasure working with him.',
       rating: 5,
     },
     {
       id: 4,
-      name: 'David Chen',
-      position: 'Lead Developer, FinTech Co.',
-      image: '/reviews/user4.jpg', // placeholder
-      review: 'As a fellow developer, I can attest to John\'s exceptional coding skills and best practices. He wrote clean, maintainable code and provided thorough documentation. It was a pleasure collaborating with him.',
+      name: 'Leo Flores',
+      position: 'Project Manager, Yondu Inc',
+      image: 'https://media.licdn.com/dms/image/v2/C4D03AQGTn2OOC6GmNg/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1516302589360?e=1757548800&v=beta&t=n4S18H_K9dUH_40CHQsV1f-kBuhJI0znoobr1V5NMb4',
+      review: 'John Alfred is one of the best Fullstack Engineer that I worked with. He has shown tremendous technical skills and has a very strong leadership quality in which he became a Scrum Master in a difficult Blockchain project. Alfred also has been in close collaboration with the COO and Directors of a major Philippine Telco company where he has been admired and respected. If I were to get or recommend a Fullstack engineer, it would be John Alfred in the top of my list.',
       rating: 5,
     },
     {
       id: 5,
-      name: 'Lisa Rodriguez',
-      position: 'UX Director, Creative Agency',
-      image: '/reviews/user5.jpg', // placeholder
-      review: 'John seamlessly translated our design vision into a fully functioning website. He was receptive to feedback and made thoughtful suggestions to improve the user experience. A truly skilled full-stack developer!',
+      name: 'Erniemar Caluag',
+      position: 'Senior Front End Engineer, Siteminder',
+      image: 'https://media.licdn.com/dms/image/v2/D5603AQEjvnFXg7w-aQ/profile-displayphoto-shrink_100_100/B56ZcV0YqjHEAU-/0/1748417745343?e=1757548800&v=beta&t=Qem2xuj4X2wXyW3z4DmiHFU3qHP_nbeJGpLU4buJL64',
+      review: 'I\'ve worked with Alfred for almost my entire career. I\'ve seen him excel at both front-end and back-end aspects of web development. He demonstrated excellent technical and soft skills, earning him the position of Team Lead on our previous company. I have no hesitation in recommending Alfred, he will be an asset to any organization.',
       rating: 5,
     },
   ];
@@ -66,7 +66,7 @@ const Reviews = () => {
   return (
     <section id="reviews" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <SectionHeading>Client Reviews</SectionHeading>
+        <SectionHeading>Testimonials</SectionHeading>
         
         <div className="relative max-w-4xl mx-auto">
           {/* Reviews Carousel */}

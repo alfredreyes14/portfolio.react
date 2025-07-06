@@ -1,20 +1,18 @@
+import Image from 'next/image';
+
 const ReviewCard = ({ review }) => {
   return (
     <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md mx-auto max-w-3xl">
       <div className="flex flex-col items-center text-center">
         <div className="w-20 h-20 rounded-full bg-gray-300 dark:bg-gray-700 mb-4 overflow-hidden">
-          {/* Placeholder for reviewer image */}
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-gray-500">{review.name.charAt(0)}</span>
-          </div>
           {/* Uncomment when you have actual images */}
-          {/* <Image 
+          <Image 
             src={review.image} 
             alt={review.name}
-            width={80}
-            height={80}
+            width={100}
+            height={100}
             className="object-cover"
-          /> */}
+          />
         </div>
         
         <div className="mb-4">
