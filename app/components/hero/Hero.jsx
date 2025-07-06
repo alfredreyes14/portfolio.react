@@ -20,7 +20,7 @@ const Hero = () => {
               I specialize in modern JavaScript frameworks, cloud architecture, 
               and delivering exceptional user experiences.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button href="#contact" primary>
                 Contact Me
               </Button>
@@ -31,10 +31,13 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
-              {/* Replace with actual profile image */}
-              <div className="absolute inset-0 bg-gray-300 flex items-center justify-center">
-                <span className="text-gray-500 text-lg">Profile Photo</span>
-              </div>
+              <Image
+                src="/images/dp.jpg"
+                alt="John Doe - Senior Full Stack Developer"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </div>
