@@ -1,56 +1,75 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, featured = false }) => {
   return (
-    <div className="bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
-      <div className="relative h-48 w-full bg-gray-200 dark:bg-gray-700">
-        {/* Placeholder for project image */}
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-300 dark:bg-gray-700">
-          <span className="text-gray-500 dark:text-gray-400 text-lg">{project.title} Image</span>
-        </div>
-        {/* Uncomment when you have actual images */}
-        {/* <Image 
-          src={project.image} 
-          alt={project.title}
-          fill
-          className="object-cover"
-        /> */}
-      </div>
-      
-      <div className="p-6">
-        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-        <p className="text-foreground mb-4">{project.description}</p>
-        
-        <div className="mb-4 flex flex-wrap gap-2">
-          {project.technologies.map(tech => (
-            <span 
-              key={tech}
-              className="inline-block px-2 py-1 text-xs font-medium bg-primary/10 text-primary rounded-md"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-        
-        <div className="flex gap-3">
-          <ProjectLink href={project.demoLink} label="Live Demo" />
-          <ProjectLink href={project.codeLink} label="View Code" />
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const ProjectLink = ({ href, label }) => {
-  return (
-    <Link
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block px-4 py-2 text-sm font-medium text-primary border border-primary rounded-md hover:bg-primary hover:text-white transition-colors"
+    <Link 
+      href={`/projects/${project.slug}`}
+      className={`block group ${featured ? 'lg:col-span-1' : ''}`}
     >
-      {label}
+      <div className={`
+        bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
+        transition-all duration-300 transform hover:-translate-y-1 cursor-pointer
+        border border-gray-200 dark:border-gray-700 hover:border-primary/50
+        ${featured ? 'lg:min-h-[400px]' : 'h-full'}
+      `}>
+        <div className={`relative ${featured ? 'h-56' : 'h-48'} w-full bg-gradient-to-br from-primary/10 to-primary/5`}>
+          {/* Placeholder for project image */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                </svg>
+              </div>
+              <span className="text-sm font-medium text-primary">View Project</span>
+            </div>
+          </div>
+          
+          {/* Featured badge */}
+          {featured && (
+            <div className="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">
+              Featured
+            </div>
+          )}
+          
+          {/* Hover overlay */}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+        </div>
+        
+        <div className={`p-6 ${featured ? 'lg:p-8' : ''}`}>
+          <div className="flex justify-between items-start mb-3">
+            <h3 className={`font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors ${featured ? 'text-2xl' : 'text-xl'}`}>
+              {project.title}
+            </h3>
+            <svg className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors ml-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
+          
+          <p className={`text-gray-600 dark:text-gray-300 mb-4 ${featured ? 'text-lg leading-relaxed' : 'text-base'}`}>
+            {project.description}
+          </p>
+          
+          <div className="mb-4 flex flex-wrap gap-2">
+            {project.technologies.map(tech => (
+              <span 
+                key={tech}
+                className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full border border-primary/20"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+          
+          <div className="flex items-center text-primary font-medium">
+            <span className="text-sm">View Case Study</span>
+            <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </div>
+        </div>
+      </div>
     </Link>
   );
 };
