@@ -27,8 +27,9 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    // Submitting
     setFormStatus({
       isSubmitting: true,
       isSubmitted: false,
@@ -36,24 +37,49 @@ const Contact = () => {
       message: '',
     });
 
-    // Simulate form submission
-    setTimeout(() => {
-      // Success simulation
-      setFormStatus({
-        isSubmitting: false,
-        isSubmitted: true,
-        isError: false,
-        message: 'Your message has been sent successfully. I will get back to you soon!',
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const res = await fetch('https://formspree.io/f/mzzgqjzr', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: formData
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+      const json = await res.json();
+      if (res.ok) {
+        setFormStatus({
+          isSubmitting: false,
+          isSubmitted: true,
+          isError: false,
+          message: 'Your message has been sent successfully. I will get back to you soon!',
+        });
+        form.reset();
+
+        setTimeout(() => {
+          setFormStatus({
+            isSubmitting: false,
+            isSubmitted: false,
+            isError: false,
+          });
+        }, 3000);
+      } else {
+        setFormStatus({
+          isSubmitting: false,
+          isSubmitted: false,
+          isError: true,
+          message: 'Oops! Something went wrong. Please try again.',
+        });
+      }
+    } catch (err) {
+      setFormStatus({
+        isSubmitting: false,
+        isSubmitted: false,
+        isError: true,
+        message: 'Oops! Something went wrong. Please try again.',
       });
-    }, 1500);
+    }
   };
 
   return (
@@ -72,36 +98,39 @@ const Contact = () => {
               </p>
 
               <div className="space-y-4">
-                <ContactInfo 
-                  icon={<EmailIcon />} 
-                  title="Email" 
-                  content="john@example.com" 
-                  href="mailto:john@example.com"
+                <ContactInfo
+                  icon={<EmailIcon />}
+                  title="Email"
+                  content="alfred@alfreddev.com / john.alfredrys@gmail.com"
+                  href="mailto:alfred@alfreddev.com"
                 />
-                <ContactInfo 
-                  icon={<PhoneIcon />} 
-                  title="Phone" 
-                  content="+1 (123) 456-7890" 
-                  href="tel:+11234567890"
+                <ContactInfo
+                  icon={<PhoneIcon />}
+                  title="Phone"
+                  content="+63 (961) 037-9728"
+                  href="tel:+639610379728"
                 />
-                <ContactInfo 
-                  icon={<LocationIcon />} 
-                  title="Location" 
-                  content="San Francisco, CA" 
+                <ContactInfo
+                  icon={<LocationIcon />}
+                  title="Location"
+                  content="Metro Manila, Philippines"
                 />
               </div>
             </div>
 
             {/* Contact Form */}
             <div>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form
+                onSubmit={handleSubmit}
+                method="POST"
+                className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-foreground mb-1">Name</label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
+                    defaultValue=""
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
                     required
@@ -114,7 +143,7 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
+                    defaultValue=""
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
                     required
@@ -127,7 +156,7 @@ const Contact = () => {
                     type="text"
                     id="subject"
                     name="subject"
-                    value={formData.subject}
+                    defaultValue={""}
                     onChange={handleChange}
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
                     required
@@ -139,7 +168,7 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
+                    defaultValue=""
                     onChange={handleChange}
                     rows="5"
                     className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
@@ -147,9 +176,9 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <Button 
-                  type="submit" 
-                  primary 
+                <Button
+                  type="submit"
+                  primary
                   disabled={formStatus.isSubmitting}
                   className="w-full"
                 >
@@ -178,8 +207,8 @@ const Contact = () => {
 
 const ContactInfo = ({ icon, title, content, href }) => {
   const contentElement = href ? (
-    <a 
-      href={href} 
+    <a
+      href={href}
       className="text-foreground hover:text-primary transition-colors"
     >
       {content}
