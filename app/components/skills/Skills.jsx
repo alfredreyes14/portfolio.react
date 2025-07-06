@@ -2,6 +2,38 @@
 
 import { useState } from 'react';
 import SectionHeading from '../ui/SectionHeading';
+import { 
+  FaReact, 
+  FaJs, 
+  FaHtml5, 
+  FaNodeJs, 
+  FaPython, 
+  FaPhp, 
+  FaDocker, 
+  FaAws, 
+  FaGitAlt,
+  FaDatabase
+} from 'react-icons/fa';
+import { 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiTailwindcss, 
+  SiRedux, 
+  SiGraphql, 
+  SiExpress, 
+  SiMongodb, 
+  SiPostgresql, 
+  SiMysql, 
+  SiFirebase, 
+  SiRedis, 
+  SiVercel, 
+  SiJira, 
+  SiJest,
+  SiOpenai,
+  SiNuxtdotjs,
+  SiLaravel
+} from 'react-icons/si';
+import { VscGithubAction } from 'react-icons/vsc';
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState('frontend');
@@ -16,48 +48,45 @@ const Skills = () => {
 
   const skillsData = {
     frontend: [
-      { name: 'React', level: 95 },
-      { name: 'Next.js', level: 90 },
-      { name: 'JavaScript', level: 95 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'HTML/CSS', level: 90 },
-      { name: 'Tailwind CSS', level: 90 },
-      { name: 'Redux', level: 85 },
-      { name: 'GraphQL (Client)', level: 80 },
+      { name: 'React', level: 95, icon: FaReact, color: '#61DAFB' },
+      { name: 'Next.js', level: 90, icon: SiNextdotjs, color: '#000000' },
+      { name: 'Nuxt.js', level: 80, icon: SiNuxtdotjs, color: '#00DC82' },
+      { name: 'JavaScript', level: 95, icon: FaJs, color: '#F7DF1E' },
+      { name: 'TypeScript', level: 85, icon: SiTypescript, color: '#3178C6' },
+      { name: 'HTML/CSS', level: 90, icon: FaHtml5, color: '#E34F26' },
+      { name: 'Tailwind CSS', level: 90, icon: SiTailwindcss, color: '#06B6D4' },
+      { name: 'Redux', level: 85, icon: SiRedux, color: '#764ABC' },
+      { name: 'GraphQL', level: 80, icon: SiGraphql, color: '#E10098' },
     ],
     backend: [
-      { name: 'Node.js', level: 90 },
-      { name: 'Express', level: 85 },
-      { name: 'Python', level: 80 },
-      { name: 'Django', level: 75 },
-      { name: 'PHP', level: 70 },
-      { name: 'GraphQL (Server)', level: 80 },
-      { name: 'REST API Design', level: 90 },
-      { name: 'WebSockets', level: 75 },
+      { name: 'Node.js', level: 90, icon: FaNodeJs, color: '#339933' },
+      { name: 'Express', level: 85, icon: SiExpress, color: '#000000' },
+      { name: 'Python', level: 80, icon: FaPython, color: '#3776AB' },
+      { name: 'PHP', level: 70, icon: FaPhp, color: '#777BB4' },
+      { name: 'Laravel', level: 75, icon: SiLaravel, color: '#FF2D20' },
+      { name: 'GraphQL', level: 80, icon: SiGraphql, color: '#E10098' },
     ],
     database: [
-      { name: 'MongoDB', level: 85 },
-      { name: 'PostgreSQL', level: 80 },
-      { name: 'MySQL', level: 85 },
-      { name: 'Firebase', level: 75 },
-      { name: 'Redis', level: 70 },
-      { name: 'Database Design', level: 85 },
+      { name: 'MongoDB', level: 85, icon: SiMongodb, color: '#47A248' },
+      { name: 'PostgreSQL', level: 80, icon: SiPostgresql, color: '#336791' },
+      { name: 'MySQL', level: 85, icon: SiMysql, color: '#4479A1' },
+      { name: 'T-SQL', level: 75, icon: FaDatabase, color: '#CC2927' },
+      { name: 'Firebase', level: 75, icon: SiFirebase, color: '#FFCA28' },
+      { name: 'Redis', level: 70, icon: SiRedis, color: '#DC382D' },
+      { name: 'Database Design', level: 85, icon: FaDatabase, color: '#4A90E2' },
     ],
     devops: [
-      { name: 'Docker', level: 80 },
-      { name: 'Kubernetes', level: 65 },
-      { name: 'AWS', level: 75 },
-      { name: 'CI/CD', level: 80 },
-      { name: 'GitHub Actions', level: 85 },
-      { name: 'Vercel', level: 90 },
+      { name: 'Docker', level: 80, icon: FaDocker, color: '#2496ED' },
+      { name: 'AWS', level: 75, icon: FaAws, color: '#FF9900' },
+      { name: 'CI/CD', level: 80, icon: VscGithubAction, color: '#2088FF' },
+      { name: 'GitHub Actions', level: 85, icon: VscGithubAction, color: '#2088FF' },
+      { name: 'Vercel', level: 90, icon: SiVercel, color: '#000000' },
     ],
     tools: [
-      { name: 'Git', level: 95 },
-      { name: 'VS Code', level: 95 },
-      { name: 'Jira', level: 80 },
-      { name: 'Figma', level: 75 },
-      { name: 'Postman', level: 90 },
-      { name: 'Jest/Testing', level: 80 },
+      { name: 'Git', level: 95, icon: FaGitAlt, color: '#F05032' },
+      { name: 'Jira', level: 80, icon: SiJira, color: '#0052CC' },
+      { name: 'Jest/Testing', level: 80, icon: SiJest, color: '#C21325' },
+      { name: 'OpenAI', level: 85, icon: SiOpenai, color: '#412991' },
     ],
   };
 
@@ -71,10 +100,10 @@ const Skills = () => {
             {skillCategories.map((category) => (
               <button
                 key={category.id}
-                className={`px-4 py-2 rounded-md transition-colors ${
+                className={`px-6 py-3 rounded-lg transition-all duration-300 font-medium ${
                   activeTab === category.id
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-200 dark:bg-gray-800 text-foreground hover:bg-gray-300 dark:hover:bg-gray-700'
+                    ? 'bg-primary text-white shadow-lg transform scale-105'
+                    : 'bg-gray-200 dark:bg-gray-800 text-foreground hover:bg-gray-300 dark:hover:bg-gray-700 hover:transform hover:scale-105'
                 }`}
                 onClick={() => setActiveTab(category.id)}
               >
@@ -84,9 +113,9 @@ const Skills = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {skillsData[activeTab].map((skill) => (
-            <SkillBar key={skill.name} name={skill.name} level={skill.level} />
+            <SkillCard key={skill.name} skill={skill} />
           ))}
         </div>
       </div>
@@ -94,18 +123,22 @@ const Skills = () => {
   );
 };
 
-const SkillBar = ({ name, level }) => {
+const SkillCard = ({ skill }) => {
+  const { name, icon: Icon, color } = skill;
+  
   return (
-    <div className="mb-6">
-      <div className="flex justify-between mb-1">
-        <span className="text-foreground font-medium">{name}</span>
-        <span className="text-foreground">{level}%</span>
-      </div>
-      <div className="w-full h-2.5 bg-gray-200 dark:bg-gray-700 rounded-full">
-        <div
-          className="h-2.5 bg-primary rounded-full"
-          style={{ width: `${level}%` }}
-        ></div>
+    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+      <div className="flex items-center gap-4">
+        <div 
+          className="p-4 rounded-lg"
+          style={{ backgroundColor: `${color}20` }}
+        >
+          <Icon 
+            className="text-3xl" 
+            style={{ color: color }}
+          />
+        </div>
+        <h3 className="text-foreground font-semibold text-lg">{name}</h3>
       </div>
     </div>
   );

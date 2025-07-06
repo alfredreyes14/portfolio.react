@@ -1,0 +1,291 @@
+---
+alwaysApply: false
+---
+# SEO Development Rules
+
+## Metadata Management
+
+### Next.js Metadata API
+- Use `generateMetadata` function for dynamic metadata
+- Implement `metadata` object for static metadata
+- Use `generateStaticParams` for static generation with dynamic routes
+- Implement proper metadata inheritance from layouts
+
+### Essential Meta Tags
+- Always include `title` and `description` for every page
+- Set appropriate `keywords` (but don't overdo it)
+- Use `author` and `creator` meta tags for content attribution
+- Implement `robots` meta tag for crawling instructions
+- Add `viewport` meta tag for mobile optimization
+
+### Open Graph (OG) Tags
+- Implement `og:title`, `og:description`, and `og:image` for all pages
+- Use `og:type` appropriate for content (website, article, etc.)
+- Set `og:url` to the canonical URL
+- Add `og:site_name` for brand consistency
+- Use high-quality images (1200x630px) for `og:image`
+
+### Twitter Card Tags
+- Implement `twitter:card` (summary, summary_large_image)
+- Use `twitter:title` and `twitter:description`
+- Add `twitter:image` with appropriate dimensions
+- Include `twitter:creator` and `twitter:site` when applicable
+
+## URL Structure & Navigation
+
+### URL Optimization
+- Use descriptive, keyword-rich URLs
+- Implement proper URL hierarchy
+- Use hyphens (-) instead of underscores (_) in URLs
+- Keep URLs short and meaningful
+- Avoid dynamic parameters in URLs when possible
+
+### Canonical URLs
+- Implement canonical tags to prevent duplicate content
+- Use absolute URLs for canonical links
+- Set canonical URLs in metadata for Next.js
+- Handle trailing slashes consistently
+
+### Internal Linking
+- Use descriptive anchor text for internal links
+- Implement proper link hierarchy and site structure
+- Use `next/link` for all internal navigation
+- Add `rel="nofollow"` for external links when appropriate
+
+## Content Optimization
+
+### Heading Structure
+- Use proper heading hierarchy (H1, H2, H3, etc.)
+- Include only one H1 per page
+- Use headings to structure content logically
+- Include target keywords in headings naturally
+
+### Content Quality
+- Write unique, high-quality content for each page
+- Use target keywords naturally throughout content
+- Implement proper content length for page type
+- Add alt text to all images for accessibility and SEO
+
+### Schema Markup (Structured Data)
+- Implement JSON-LD structured data
+- Use appropriate schema types (Organization, Person, Article, etc.)
+- Add breadcrumb schema for navigation
+- Implement local business schema when applicable
+
+## Technical SEO
+
+### Page Speed Optimization
+- Use Next.js Image component for optimized images
+- Implement proper font loading strategies
+- Minimize JavaScript and CSS bundles
+- Use Next.js performance optimizations (static generation, ISR)
+
+### Core Web Vitals
+- Optimize Largest Contentful Paint (LCP)
+- Minimize First Input Delay (FID)
+- Reduce Cumulative Layout Shift (CLS)
+- Monitor and improve Core Web Vitals regularly
+
+### Mobile Optimization
+- Implement responsive design for all devices
+- Use proper viewport meta tag
+- Optimize touch targets and button sizes
+- Test mobile usability regularly
+
+## Site Architecture
+
+### XML Sitemap
+- Generate XML sitemap for all pages
+- Include priority and changefreq for pages
+- Submit sitemap to search engines
+- Update sitemap when content changes
+
+### Robots.txt
+- Create proper robots.txt file
+- Allow crawling of important pages
+- Disallow crawling of admin, private, or duplicate pages
+- Include sitemap location in robots.txt
+
+### Site Navigation
+- Implement clear, logical navigation structure
+- Use breadcrumbs for deep page hierarchies
+- Create HTML sitemap for users
+- Implement search functionality for large sites
+
+## Analytics & Monitoring
+
+### Google Analytics
+- Implement GA4 tracking
+- Set up conversion tracking for goals
+- Monitor organic traffic and user behavior
+- Track Core Web Vitals in Analytics
+
+### Search Console
+- Set up Google Search Console
+- Monitor indexing status and errors
+- Track search performance and keywords
+- Submit sitemaps and request indexing
+
+### Performance Monitoring
+- Use tools like PageSpeed Insights
+- Monitor SEO performance with SEO tools
+- Track ranking positions for target keywords
+- Monitor backlinks and domain authority
+
+## Local SEO (if applicable)
+
+### Local Business Information
+- Include NAP (Name, Address, Phone) consistently
+- Implement local business schema markup
+- Optimize for local search keywords
+- Create location-specific pages for multiple locations
+
+### Google My Business
+- Claim and optimize Google My Business listing
+- Encourage customer reviews
+- Post regular updates and content
+- Monitor and respond to reviews
+# SEO Development Rules
+
+## Metadata Management
+
+### Next.js Metadata API
+- Use `generateMetadata` function for dynamic metadata
+- Implement `metadata` object for static metadata
+- Use `generateStaticParams` for static generation with dynamic routes
+- Implement proper metadata inheritance from layouts
+
+### Essential Meta Tags
+- Always include `title` and `description` for every page
+- Set appropriate `keywords` (but don't overdo it)
+- Use `author` and `creator` meta tags for content attribution
+- Implement `robots` meta tag for crawling instructions
+- Add `viewport` meta tag for mobile optimization
+
+### Open Graph (OG) Tags
+- Implement `og:title`, `og:description`, and `og:image` for all pages
+- Use `og:type` appropriate for content (website, article, etc.)
+- Set `og:url` to the canonical URL
+- Add `og:site_name` for brand consistency
+- Use high-quality images (1200x630px) for `og:image`
+
+### Twitter Card Tags
+- Implement `twitter:card` (summary, summary_large_image)
+- Use `twitter:title` and `twitter:description`
+- Add `twitter:image` with appropriate dimensions
+- Include `twitter:creator` and `twitter:site` when applicable
+
+## URL Structure & Navigation
+
+### URL Optimization
+- Use descriptive, keyword-rich URLs
+- Implement proper URL hierarchy
+- Use hyphens (-) instead of underscores (_) in URLs
+- Keep URLs short and meaningful
+- Avoid dynamic parameters in URLs when possible
+
+### Canonical URLs
+- Implement canonical tags to prevent duplicate content
+- Use absolute URLs for canonical links
+- Set canonical URLs in metadata for Next.js
+- Handle trailing slashes consistently
+
+### Internal Linking
+- Use descriptive anchor text for internal links
+- Implement proper link hierarchy and site structure
+- Use `next/link` for all internal navigation
+- Add `rel="nofollow"` for external links when appropriate
+
+## Content Optimization
+
+### Heading Structure
+- Use proper heading hierarchy (H1, H2, H3, etc.)
+- Include only one H1 per page
+- Use headings to structure content logically
+- Include target keywords in headings naturally
+
+### Content Quality
+- Write unique, high-quality content for each page
+- Use target keywords naturally throughout content
+- Implement proper content length for page type
+- Add alt text to all images for accessibility and SEO
+
+### Schema Markup (Structured Data)
+- Implement JSON-LD structured data
+- Use appropriate schema types (Organization, Person, Article, etc.)
+- Add breadcrumb schema for navigation
+- Implement local business schema when applicable
+
+## Technical SEO
+
+### Page Speed Optimization
+- Use Next.js Image component for optimized images
+- Implement proper font loading strategies
+- Minimize JavaScript and CSS bundles
+- Use Next.js performance optimizations (static generation, ISR)
+
+### Core Web Vitals
+- Optimize Largest Contentful Paint (LCP)
+- Minimize First Input Delay (FID)
+- Reduce Cumulative Layout Shift (CLS)
+- Monitor and improve Core Web Vitals regularly
+
+### Mobile Optimization
+- Implement responsive design for all devices
+- Use proper viewport meta tag
+- Optimize touch targets and button sizes
+- Test mobile usability regularly
+
+## Site Architecture
+
+### XML Sitemap
+- Generate XML sitemap for all pages
+- Include priority and changefreq for pages
+- Submit sitemap to search engines
+- Update sitemap when content changes
+
+### Robots.txt
+- Create proper robots.txt file
+- Allow crawling of important pages
+- Disallow crawling of admin, private, or duplicate pages
+- Include sitemap location in robots.txt
+
+### Site Navigation
+- Implement clear, logical navigation structure
+- Use breadcrumbs for deep page hierarchies
+- Create HTML sitemap for users
+- Implement search functionality for large sites
+
+## Analytics & Monitoring
+
+### Google Analytics
+- Implement GA4 tracking
+- Set up conversion tracking for goals
+- Monitor organic traffic and user behavior
+- Track Core Web Vitals in Analytics
+
+### Search Console
+- Set up Google Search Console
+- Monitor indexing status and errors
+- Track search performance and keywords
+- Submit sitemaps and request indexing
+
+### Performance Monitoring
+- Use tools like PageSpeed Insights
+- Monitor SEO performance with SEO tools
+- Track ranking positions for target keywords
+- Monitor backlinks and domain authority
+
+## Local SEO (if applicable)
+
+### Local Business Information
+- Include NAP (Name, Address, Phone) consistently
+- Implement local business schema markup
+- Optimize for local search keywords
+- Create location-specific pages for multiple locations
+
+### Google My Business
+- Claim and optimize Google My Business listing
+- Encourage customer reviews
+- Post regular updates and content
+- Monitor and respond to reviews

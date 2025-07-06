@@ -1,0 +1,244 @@
+---
+alwaysApply: true
+---
+
+# Next.js Development Rules
+
+## App Router Architecture (Next.js 13+)
+
+### File Structure
+- Use the `app/` directory structure for routing
+- Place page components in `page.jsx` files within route directories
+- Use `layout.jsx` for shared layouts across routes
+- Implement `loading.jsx` for loading states
+- Create `error.jsx` for error boundaries
+- Use `not-found.jsx` for custom 404 pages
+- Implement `template.jsx` for layouts that need to re-render
+
+### Route Organization
+- Use route groups `(folder)` for organization without affecting URL structure
+- Implement parallel routes with `@folder` convention
+- Use intercepting routes with `(.)folder` for modals
+- Create dynamic routes with `[param]` and `[...slug]` patterns
+
+## Routing & Navigation
+
+### Navigation Hooks
+- Use `useRouter` from `next/navigation` for programmatic navigation
+- Implement `usePathname` to get current pathname
+- Use `useSearchParams` for URL search parameters
+- Use `useParams` for dynamic route parameters
+
+### Link Component
+- Use `next/link` for client-side navigation
+- Implement prefetching for performance optimization
+- Use `replace` prop to replace current history entry
+- Add `scroll` prop to control scroll behavior
+
+## Data Fetching
+
+### Server Components
+- Use Server Components for data fetching when possible
+- Implement `fetch` with Next.js extensions (caching, revalidation)
+- Use `cache` function for request memoization
+- Implement `unstable_cache` for long-term caching
+
+### Client Components
+- Use `use` hook for data fetching in Client Components
+- Implement SWR or React Query for client-side data fetching
+- Use `useEffect` with proper dependencies for side effects
+- Implement proper loading and error states
+
+### Caching Strategies
+- Use `revalidateTag` and `revalidatePath` for cache management
+- Implement ISR (Incremental Static Regeneration) when appropriate
+- Use `force-cache` and `no-store` fetch options strategically
+- Implement time-based revalidation with `next.revalidate`
+
+## API Routes
+
+### Route Handlers
+- Place API routes in `app/api/` directory
+- Use proper HTTP methods (GET, POST, PUT, DELETE, PATCH)
+- Return Response objects with proper status codes
+- Implement request validation and error handling
+
+### Middleware
+- Use `middleware.js` for authentication and CORS
+- Implement route protection with proper redirects
+- Use `NextRequest` and `NextResponse` for request/response handling
+- Implement rate limiting and security headers
+
+### Response Handling
+- Return consistent JSON response formats
+- Use proper HTTP status codes (200, 201, 400, 401, 404, 500)
+- Implement proper error responses with meaningful messages
+- Use `NextResponse.json()` for JSON responses
+
+## Performance Optimization
+
+### Image Optimization
+- Use `next/image` component for all images
+- Implement proper `alt` attributes for accessibility
+- Use `priority` prop for above-the-fold images
+- Set appropriate `sizes` prop for responsive images
+
+### Font Optimization
+- Use `next/font` for font optimization
+- Implement font preloading for critical fonts
+- Use `font-display: swap` for better loading performance
+- Optimize font loading with proper fallbacks
+
+### Code Splitting
+- Use dynamic imports for code splitting
+- Implement lazy loading for components when appropriate
+- Use `next/dynamic` for dynamic component loading
+- Optimize bundle size with tree shaking
+
+## Environment & Configuration
+
+### Environment Variables
+- Use `.env.local` for local environment variables
+- Prefix client-side variables with `NEXT_PUBLIC_`
+- Use `process.env` for server-side variables
+- Implement proper environment variable validation
+
+### Configuration
+- Use `next.config.mjs` for Next.js configuration
+- Implement proper build optimization settings
+- Configure redirects and rewrites in next.config
+- Set up proper headers and security configurations
+
+## Deployment & Build
+
+### Build Optimization
+- Use `next build` for production builds
+- Implement proper static generation where appropriate
+- Use `output: 'export'` for static exports when needed
+- Monitor build performance and bundle size
+
+### Deployment Strategies
+- Use Vercel for optimal Next.js deployment
+- Implement proper CI/CD pipelines
+- Use environment-specific configurations
+- Monitor deployment performance and errors
+# Next.js Development Rules
+
+## App Router Architecture (Next.js 13+)
+
+### File Structure
+- Use the `app/` directory structure for routing
+- Place page components in `page.jsx` files within route directories
+- Use `layout.jsx` for shared layouts across routes
+- Implement `loading.jsx` for loading states
+- Create `error.jsx` for error boundaries
+- Use `not-found.jsx` for custom 404 pages
+- Implement `template.jsx` for layouts that need to re-render
+
+### Route Organization
+- Use route groups `(folder)` for organization without affecting URL structure
+- Implement parallel routes with `@folder` convention
+- Use intercepting routes with `(.)folder` for modals
+- Create dynamic routes with `[param]` and `[...slug]` patterns
+
+## Routing & Navigation
+
+### Navigation Hooks
+- Use `useRouter` from `next/navigation` for programmatic navigation
+- Implement `usePathname` to get current pathname
+- Use `useSearchParams` for URL search parameters
+- Use `useParams` for dynamic route parameters
+
+### Link Component
+- Use `next/link` for client-side navigation
+- Implement prefetching for performance optimization
+- Use `replace` prop to replace current history entry
+- Add `scroll` prop to control scroll behavior
+
+## Data Fetching
+
+### Server Components
+- Use Server Components for data fetching when possible
+- Implement `fetch` with Next.js extensions (caching, revalidation)
+- Use `cache` function for request memoization
+- Implement `unstable_cache` for long-term caching
+
+### Client Components
+- Use `use` hook for data fetching in Client Components
+- Implement SWR or React Query for client-side data fetching
+- Use `useEffect` with proper dependencies for side effects
+- Implement proper loading and error states
+
+### Caching Strategies
+- Use `revalidateTag` and `revalidatePath` for cache management
+- Implement ISR (Incremental Static Regeneration) when appropriate
+- Use `force-cache` and `no-store` fetch options strategically
+- Implement time-based revalidation with `next.revalidate`
+
+## API Routes
+
+### Route Handlers
+- Place API routes in `app/api/` directory
+- Use proper HTTP methods (GET, POST, PUT, DELETE, PATCH)
+- Return Response objects with proper status codes
+- Implement request validation and error handling
+
+### Middleware
+- Use `middleware.js` for authentication and CORS
+- Implement route protection with proper redirects
+- Use `NextRequest` and `NextResponse` for request/response handling
+- Implement rate limiting and security headers
+
+### Response Handling
+- Return consistent JSON response formats
+- Use proper HTTP status codes (200, 201, 400, 401, 404, 500)
+- Implement proper error responses with meaningful messages
+- Use `NextResponse.json()` for JSON responses
+
+## Performance Optimization
+
+### Image Optimization
+- Use `next/image` component for all images
+- Implement proper `alt` attributes for accessibility
+- Use `priority` prop for above-the-fold images
+- Set appropriate `sizes` prop for responsive images
+
+### Font Optimization
+- Use `next/font` for font optimization
+- Implement font preloading for critical fonts
+- Use `font-display: swap` for better loading performance
+- Optimize font loading with proper fallbacks
+
+### Code Splitting
+- Use dynamic imports for code splitting
+- Implement lazy loading for components when appropriate
+- Use `next/dynamic` for dynamic component loading
+- Optimize bundle size with tree shaking
+
+## Environment & Configuration
+
+### Environment Variables
+- Use `.env.local` for local environment variables
+- Prefix client-side variables with `NEXT_PUBLIC_`
+- Use `process.env` for server-side variables
+- Implement proper environment variable validation
+
+### Configuration
+- Use `next.config.mjs` for Next.js configuration
+- Implement proper build optimization settings
+- Configure redirects and rewrites in next.config
+- Set up proper headers and security configurations
+
+## Deployment & Build
+
+### Build Optimization
+- Use `next build` for production builds
+- Implement proper static generation where appropriate
+- Use `output: 'export'` for static exports when needed
+- Monitor build performance and bundle size
+
+### Deployment Strategies
+- Use Vercel for optimal Next.js deployment
+- Implement proper CI/CD pipelines
+- Use environment-specific configurations
+- Monitor deployment performance and errors

@@ -1,0 +1,152 @@
+---
+alwaysApply: true
+---
+
+# JavaScript Development Rules
+
+## Modern JavaScript Features
+
+### ES6+ Syntax
+- Use arrow functions for concise function expressions
+- Prefer `const` over `let`, avoid `var` completely
+- Use template literals for string interpolation
+- Implement destructuring for objects and arrays
+- Use spread operator for array/object manipulation
+- Implement default parameters for functions
+
+### Advanced Features
+- Use optional chaining (`?.`) for safe property access
+- Implement nullish coalescing (`??`) for default values
+- Use async/await over Promise chains for better readability
+- Implement proper Promise handling with try/catch
+- Use array methods (map, filter, reduce, forEach) for functional programming
+- Implement proper closure patterns
+
+## Code Quality & Style
+
+### Variable and Function Naming
+- Use descriptive, explicit variable names
+- Use camelCase for variables and functions
+- Use PascalCase for constructors and classes
+- Use UPPER_SNAKE_CASE for constants
+- Avoid abbreviations and single-letter variables (except loop counters)
+
+### Code Structure
+- Use early returns to reduce nesting
+- Keep functions small and focused (single responsibility)
+- Avoid magic numbers - use named constants
+- Implement proper error handling with try/catch
+- Use consistent indentation and formatting
+- Add JSDoc comments for complex functions
+
+### Performance Best Practices
+- Use `Object.freeze()` for immutable objects
+- Implement debouncing for frequent operations
+- Use `requestAnimationFrame` for animations
+- Avoid memory leaks with proper cleanup
+- Use efficient array methods and avoid nested loops
+- Implement lazy loading for heavy operations
+
+## Error Handling & Debugging
+
+### Error Management
+- Use specific error types and messages
+- Implement proper error boundaries
+- Log errors with context information
+- Use assertions for development debugging
+- Implement graceful degradation for failures
+
+### Debugging Tools
+- Use `console.log` strategically (remove in production)
+- Implement proper debugging with breakpoints
+- Use browser developer tools effectively
+- Test edge cases and error scenarios
+
+## Security Considerations
+
+### Input Validation
+- Validate and sanitize all user inputs
+- Use proper regex patterns for validation
+- Implement XSS prevention techniques
+- Avoid using `eval()` and similar dangerous functions
+- Use Content Security Policy (CSP) headers
+
+### Data Handling
+- Never expose sensitive data in client-side code
+- Use environment variables for configuration
+- Implement proper authentication checks
+- Use HTTPS for all data transmission
+# JavaScript Development Rules
+
+## Modern JavaScript Features
+
+### ES6+ Syntax
+- Use arrow functions for concise function expressions
+- Prefer `const` over `let`, avoid `var` completely
+- Use template literals for string interpolation
+- Implement destructuring for objects and arrays
+- Use spread operator for array/object manipulation
+- Implement default parameters for functions
+
+### Advanced Features
+- Use optional chaining (`?.`) for safe property access
+- Implement nullish coalescing (`??`) for default values
+- Use async/await over Promise chains for better readability
+- Implement proper Promise handling with try/catch
+- Use array methods (map, filter, reduce, forEach) for functional programming
+- Implement proper closure patterns
+
+## Code Quality & Style
+
+### Variable and Function Naming
+- Use descriptive, explicit variable names
+- Use camelCase for variables and functions
+- Use PascalCase for constructors and classes
+- Use UPPER_SNAKE_CASE for constants
+- Avoid abbreviations and single-letter variables (except loop counters)
+
+### Code Structure
+- Use early returns to reduce nesting
+- Keep functions small and focused (single responsibility)
+- Avoid magic numbers - use named constants
+- Implement proper error handling with try/catch
+- Use consistent indentation and formatting
+- Add JSDoc comments for complex functions
+
+### Performance Best Practices
+- Use `Object.freeze()` for immutable objects
+- Implement debouncing for frequent operations
+- Use `requestAnimationFrame` for animations
+- Avoid memory leaks with proper cleanup
+- Use efficient array methods and avoid nested loops
+- Implement lazy loading for heavy operations
+
+## Error Handling & Debugging
+
+### Error Management
+- Use specific error types and messages
+- Implement proper error boundaries
+- Log errors with context information
+- Use assertions for development debugging
+- Implement graceful degradation for failures
+
+### Debugging Tools
+- Use `console.log` strategically (remove in production)
+- Implement proper debugging with breakpoints
+- Use browser developer tools effectively
+- Test edge cases and error scenarios
+
+## Security Considerations
+
+### Input Validation
+- Validate and sanitize all user inputs
+- Use proper regex patterns for validation
+- Implement XSS prevention techniques
+- Avoid using `eval()` and similar dangerous functions
+- Use Content Security Policy (CSP) headers
+
+### Data Handling
+- Never expose sensitive data in client-side code
+- Use environment variables for configuration
+- Implement proper authentication checks
+- Use HTTPS for all data transmission

@@ -1,0 +1,307 @@
+---
+alwaysApply: false
+---
+# General Development Rules
+
+## Code Quality & Standards
+
+### File Organization
+- Use consistent file and folder naming conventions
+- Group related files in logical directories
+- Keep file sizes reasonable (under 500 lines when possible)
+- Use descriptive file names that reflect their purpose
+- Maintain a clear project structure
+
+### Code Style
+- Use consistent indentation (2 spaces)
+- Follow consistent naming conventions throughout the project
+- Use meaningful variable and function names
+- Keep functions small and focused (single responsibility)
+- Use consistent code formatting (Prettier/ESLint)
+
+### Comments & Documentation
+- Write clear, concise comments for complex logic
+- Use JSDoc for function and method documentation
+- Keep comments up-to-date with code changes
+- Explain "why" not "what" in comments
+- Document public APIs and interfaces
+
+## Version Control & Git
+
+### Commit Practices
+- Write clear, descriptive commit messages
+- Use conventional commit format when applicable
+- Make atomic commits (one logical change per commit)
+- Avoid committing sensitive information
+- Use meaningful branch names
+
+### Branch Management
+- Use feature branches for new development
+- Keep main/master branch stable
+- Merge or rebase feature branches properly
+- Delete merged branches to keep repository clean
+- Use pull requests for code review
+
+## Security Best Practices
+
+### Data Protection
+- Never commit sensitive information (API keys, passwords)
+- Use environment variables for configuration
+- Implement proper input validation
+- Use HTTPS for all data transmission
+- Implement proper authentication and authorization
+
+### Code Security
+- Validate all user inputs
+- Use parameterized queries to prevent SQL injection
+- Implement XSS protection
+- Use secure headers (CSP, HSTS, etc.)
+- Keep dependencies updated
+
+## Testing & Quality Assurance
+
+### Testing Strategy
+- Write unit tests for critical functions
+- Implement integration tests for user workflows
+- Test edge cases and error scenarios
+- Maintain good test coverage (aim for 80%+)
+- Use meaningful test descriptions
+
+### Code Review
+- Review code for logic errors and security issues
+- Check for code style consistency
+- Verify proper error handling
+- Ensure adequate test coverage
+- Provide constructive feedback
+
+## Performance & Optimization
+
+### General Performance
+- Optimize for the most common use cases
+- Avoid premature optimization
+- Profile and measure performance regularly
+- Use efficient algorithms and data structures
+- Implement caching where appropriate
+
+### Resource Management
+- Clean up resources properly (event listeners, timers)
+- Avoid memory leaks
+- Use lazy loading for heavy resources
+- Implement proper error handling
+- Monitor application performance
+
+## Development Workflow
+
+### Project Setup
+- Use package managers (npm) for dependencies
+- Maintain dependency versions consistently
+- Use lock files to ensure consistent installs
+- Document setup and installation procedures
+- Use development and production configurations
+
+### Code Organization
+- Follow separation of concerns principle
+- Use modular design patterns
+- Keep business logic separate from UI
+- Implement proper error boundaries
+- Use consistent architecture patterns
+
+## Accessibility & User Experience
+
+### Accessibility
+- Use semantic HTML elements
+- Provide proper ARIA labels
+- Ensure keyboard navigation support
+- Test with screen readers
+- Maintain proper color contrast
+
+### User Experience
+- Implement responsive design
+- Provide meaningful error messages
+- Use loading states for async operations
+- Implement proper form validation
+- Test on multiple devices and browsers
+
+## Documentation & Communication
+
+### Project Documentation
+- Maintain up-to-date README files
+- Document API endpoints and usage
+- Create contribution guidelines
+- Document deployment procedures
+- Keep change logs updated
+
+### Team Communication
+- Use clear, professional communication
+- Document decisions and architecture choices
+- Share knowledge through code comments
+- Participate in code reviews constructively
+- Ask questions when unclear
+
+## Error Handling & Logging
+
+### Error Management
+- Implement proper error boundaries
+- Use try-catch blocks appropriately
+- Provide meaningful error messages
+- Log errors with sufficient context
+- Handle errors gracefully
+
+### Logging
+- Use appropriate log levels (debug, info, warn, error)
+- Log important application events
+- Include relevant context in logs
+- Avoid logging sensitive information
+- Use structured logging when possible
+# General Development Rules
+
+## Code Quality & Standards
+
+### File Organization
+- Use consistent file and folder naming conventions
+- Group related files in logical directories
+- Keep file sizes reasonable (under 500 lines when possible)
+- Use descriptive file names that reflect their purpose
+- Maintain a clear project structure
+
+### Code Style
+- Use consistent indentation (2 or 4 spaces)
+- Follow consistent naming conventions throughout the project
+- Use meaningful variable and function names
+- Keep functions small and focused (single responsibility)
+- Use consistent code formatting (Prettier/ESLint)
+
+### Comments & Documentation
+- Write clear, concise comments for complex logic
+- Use JSDoc for function and method documentation
+- Keep comments up-to-date with code changes
+- Explain "why" not "what" in comments
+- Document public APIs and interfaces
+
+## Version Control & Git
+
+### Commit Practices
+- Write clear, descriptive commit messages
+- Use conventional commit format when applicable
+- Make atomic commits (one logical change per commit)
+- Avoid committing sensitive information
+- Use meaningful branch names
+
+### Branch Management
+- Use feature branches for new development
+- Keep main/master branch stable
+- Merge or rebase feature branches properly
+- Delete merged branches to keep repository clean
+- Use pull requests for code review
+
+## Security Best Practices
+
+### Data Protection
+- Never commit sensitive information (API keys, passwords)
+- Use environment variables for configuration
+- Implement proper input validation
+- Use HTTPS for all data transmission
+- Implement proper authentication and authorization
+
+### Code Security
+- Validate all user inputs
+- Use parameterized queries to prevent SQL injection
+- Implement XSS protection
+- Use secure headers (CSP, HSTS, etc.)
+- Keep dependencies updated
+
+## Testing & Quality Assurance
+
+### Testing Strategy
+- Write unit tests for critical functions
+- Implement integration tests for user workflows
+- Test edge cases and error scenarios
+- Maintain good test coverage (aim for 80%+)
+- Use meaningful test descriptions
+
+### Code Review
+- Review code for logic errors and security issues
+- Check for code style consistency
+- Verify proper error handling
+- Ensure adequate test coverage
+- Provide constructive feedback
+
+## Performance & Optimization
+
+### General Performance
+- Optimize for the most common use cases
+- Avoid premature optimization
+- Profile and measure performance regularly
+- Use efficient algorithms and data structures
+- Implement caching where appropriate
+
+### Resource Management
+- Clean up resources properly (event listeners, timers)
+- Avoid memory leaks
+- Use lazy loading for heavy resources
+- Implement proper error handling
+- Monitor application performance
+
+## Development Workflow
+
+### Project Setup
+- Use package managers (npm, yarn) for dependencies
+- Maintain dependency versions consistently
+- Use lock files to ensure consistent installs
+- Document setup and installation procedures
+- Use development and production configurations
+
+### Code Organization
+- Follow separation of concerns principle
+- Use modular design patterns
+- Keep business logic separate from UI
+- Implement proper error boundaries
+- Use consistent architecture patterns
+
+## Accessibility & User Experience
+
+### Accessibility
+- Use semantic HTML elements
+- Provide proper ARIA labels
+- Ensure keyboard navigation support
+- Test with screen readers
+- Maintain proper color contrast
+
+### User Experience
+- Implement responsive design
+- Provide meaningful error messages
+- Use loading states for async operations
+- Implement proper form validation
+- Test on multiple devices and browsers
+
+## Documentation & Communication
+
+### Project Documentation
+- Maintain up-to-date README files
+- Document API endpoints and usage
+- Create contribution guidelines
+- Document deployment procedures
+- Keep change logs updated
+
+### Team Communication
+- Use clear, professional communication
+- Document decisions and architecture choices
+- Share knowledge through code comments
+- Participate in code reviews constructively
+- Ask questions when unclear
+
+## Error Handling & Logging
+
+### Error Management
+- Implement proper error boundaries
+- Use try-catch blocks appropriately
+- Provide meaningful error messages
+- Log errors with sufficient context
+- Handle errors gracefully
+
+### Logging
+- Use appropriate log levels (debug, info, warn, error)
+- Log important application events
+- Include relevant context in logs
+- Avoid logging sensitive information
+- Use structured logging when possible
