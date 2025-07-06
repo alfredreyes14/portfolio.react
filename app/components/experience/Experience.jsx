@@ -5,86 +5,68 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      company: 'Tech Innovations Inc.',
-      position: 'Senior Full Stack Developer',
-      period: '2021 - Present',
-      description: 'Leading a team of 5 developers in building a scalable e-commerce platform using React, Node.js, and MongoDB. Implemented CI/CD pipelines and improved system performance by 40%.',
+      company: 'Unicty International',
+      position: 'Sr. Full Stack Engineer',
+      period: '2024 - Present',
+      location: 'Taguig City, Philippines - Hybrid',
+      description: 'Developed a distributor tool that to help distributors manage and grow their business and organization. \n\n Streamlined and improve processes through automation and AI.',
       responsibilities: [
-        'Architected and developed RESTful APIs using Node.js and Express',
-        'Built responsive frontend using React and Redux',
-        'Implemented authentication and authorization systems',
-        'Optimized database queries and application performance',
-        'Mentored junior developers and conducted code reviews'
+        'Pioneered an AI translation automation & deployment pipeline, cutting process time from 3 days to under 5 minutes.',
+        'Developed a referral-link feature that boosted customer sales by 30%.',
+        'Led performance optimizations, improving page load speeds by 80%.',
+        'Streamlined the deployment process for new markets reducing the total time from 3 hours to around 10 minutes.',
+        'Responsible for improving our product\'s translation layers enabling us to serve multiple markets with different languages serving 98% accurate translated values.'
       ]
     },
     {
       id: 2,
-      company: 'Digital Solutions Ltd.',
-      position: 'Full Stack Developer',
-      period: '2018 - 2021',
-      description: 'Developed and maintained multiple web applications for clients in finance, healthcare, and retail sectors. Utilized React, TypeScript, and Python Django for rapid development.',
+      company: 'Cognization Softvision',
+      position: 'Software Engineer',
+      location: 'Makati City, Philippines - Hybrid',
+      period: '2022 - 2024',
+      description: 'Co-led and agile team that developed an auditing assurance system for one of US\'s largest auditing companies. \n\n The system is used to streamline and automate the auditing process of the company.',
       responsibilities: [
-        'Created custom CMS solutions for enterprise clients',
-        'Integrated third-party APIs and payment gateways',
-        'Implemented data visualization dashboards with D3.js',
-        'Collaborated with UX designers to improve user experience',
-        'Wrote unit and integration tests using Jest and Pytest'
+        'Co-led an Agile team to build an auditing-assurance platform for enterprise clients that streamlines auditing processes and increased their revenue by 20%.',
+        'Architected and optimized production critical ETL and suggestion services written in Node.js and Transact- SQL reducing total execution time by 15%.',
+        'Designed a data heavy analytics page and optimized the page performance by 15%.'
       ]
     },
     {
       id: 3,
-      company: 'WebTech Solutions',
-      position: 'Frontend Developer',
-      period: '2016 - 2018',
-      description: 'Worked on developing interactive and responsive web applications using HTML5, CSS3, and JavaScript frameworks like React and Angular.',
+      company: 'Locale Europe LTD (Through Cloud Employee Inc. * Lay-off)',
+      position: 'Full Stack Engineer',
+      location: 'Greater London, UK - Remote (From Philippines)',
+      period: '2022',
+      description: 'Responsible for developing an SaaS platform that helps companies manage and order translations for their products.',
       responsibilities: [
-        'Built responsive UI components using modern CSS frameworks',
-        'Implemented complex state management with Redux',
-        'Created animations and interactive elements using GSAP',
-        'Optimized web performance and accessibility',
-        'Participated in daily scrums and sprint planning'
+        'Led the end-to-end integration of new partner systems into our core platform, cutting manual onboarding effort by 95% and accelerating time-to-live from 2 weeks to 3 days.',
+        'Designed and deployed external microservices using Node.js, AWS and Lambda, optimizing API response times by 40% and reducing infrastructure costs by 20%.',
+        'Integrated 3rd party APIs—automating sync of over 2,000 records/day and reducing data-mismatch errors by 90%.',
+        'Developed a new Contentful powered website that drove a 20% lift in monthly traffic and slashed full-stack deployment time by 30%.'
       ]
     },
     {
       id: 4,
-      company: 'Global Systems',
-      position: 'Junior Web Developer',
-      period: '2015 - 2016',
-      description: 'Started as a junior developer working on company website and internal tools. Gained experience in front-end development and basic backend operations.',
+      company: 'Yondu Inc',
+      position: 'Software Engineer',
+      location: 'Taguig City, Philippines - Remote',
+      period: '2021 - 2022',
+      description: 'Led an agile team that developed a digital credential application powered by blockchain technology that enables users to store and verify real-world credentials.',
       responsibilities: [
-        'Developed and maintained company website using WordPress',
-        'Created custom PHP scripts for data processing',
-        'Assisted senior developers with debugging and testing',
-        'Implemented responsive designs based on Figma mockups',
-        'Learned version control with Git and team collaboration'
+        'Spearheaded a blockchain‑based digital credential project that allowed users to seamlessly save their IDs over our application and use it as a true identifiable copy.',
+        'Developed an NFT market place using React.js to promote the partnerships of our clients and increased their annual revenue by 12%.'
       ]
     },
     {
       id: 5,
-      company: 'Freelance',
+      company: 'Cafe24 Philippines',
       position: 'Web Developer',
-      period: '2014 - 2015',
-      description: 'Worked on various freelance projects for small businesses and startups, building websites and simple web applications.',
+      location: 'Pasig City, Philippines',
+      period: '2019 - 2021',
+      description: 'Part of an internal team that develops internal applications for business growth and analytics.',
       responsibilities: [
-        'Built custom websites for small businesses',
-        'Implemented e-commerce functionality using WooCommerce',
-        'Created custom themes and plugins',
-        'Performed SEO optimizations',
-        'Provided technical support and maintenance'
-      ]
-    },
-    {
-      id: 6,
-      company: 'Tech University',
-      position: 'Internship',
-      period: '2013 - 2014',
-      description: 'Completed a 6-month internship at the university IT department while completing my computer science degree.',
-      responsibilities: [
-        'Assisted in maintaining university web portal',
-        'Developed small utility scripts for department use',
-        'Learned database management with MySQL',
-        'Participated in user testing sessions',
-        'Documented technical processes and solutions'
+        'Built an internal data-visualization app with advanced filters across 10+ dimensions, enabling stakeholders to generate custom reports 40% faster.',
+        'Developed services using Node.js, Typescript, Python, MySQL and GraphQL for a customer targeting system that served 100k+ customers across Korea.'
       ]
     }
   ];

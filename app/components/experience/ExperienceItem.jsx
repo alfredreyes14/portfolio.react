@@ -5,12 +5,13 @@ const ExperienceItem = ({ experience, isEven }) => {
       <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-5 h-5 rounded-full bg-primary border-4 border-background z-10"></div>
       
       {/* Content */}
-      <div className={`md:w-1/2 ${isEven ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
+      <div className={`md:w-1/2 ${isEven ? 'md:pr-12' : 'md:pl-12 md:ml-auto'}`}>
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
           <div className="flex flex-col">
             <span className="text-primary font-semibold">{experience.period}</span>
             <h3 className="text-xl font-bold mt-1">{experience.position}</h3>
             <h4 className="text-lg text-muted mb-3">{experience.company}</h4>
+            <h4 className="text-md text-muted mb-3">{experience.location}</h4>
             <p className="text-foreground mb-4">{experience.description}</p>
             
             <h5 className="font-semibold mb-2">Key Responsibilities:</h5>
