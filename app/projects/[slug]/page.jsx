@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
-import Image from 'next/image';
 import Link from 'next/link';
 import { projectsData } from '../../data/projects';
+import ProjectGallery from '../../components/ProjectGallery';
 
 const ProjectCaseStudy = ({ params }) => {
   const project = projectsData.find(p => p.slug === params.slug);
@@ -62,8 +62,10 @@ const ProjectCaseStudy = ({ params }) => {
         </div>
       </section>
 
+      <ProjectGallery project={project} />
+
       {/* Project Overview */}
-      <section className="py-16">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -104,42 +106,8 @@ const ProjectCaseStudy = ({ params }) => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-              Project Gallery
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {project.gallery.map((image, index) => (
-                <div key={index} className="group">
-                  <div className="relative aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-primary/20 to-primary/10">
-                      <div className="text-center">
-                        <div className="w-12 h-12 bg-primary/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                          <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                          </svg>
-                        </div>
-                        <span className="text-sm font-medium text-primary">{image.title}</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-3">
-                    <h3 className="font-medium text-gray-900 dark:text-white">{image.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">{image.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
