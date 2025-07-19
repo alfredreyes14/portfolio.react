@@ -134,6 +134,7 @@ const ImagePreview = ({
               src={getImageUrl(images[activeIndex])}
               alt={getImageAlt(images[activeIndex], activeIndex)}
               className="w-full h-full object-contain touch-pan-x"
+              style={{ maxHeight: '80vh' }}
               loading="lazy"
             />
           </div>
