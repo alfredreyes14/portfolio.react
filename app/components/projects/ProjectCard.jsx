@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const ProjectCard = ({ project, featured = false }) => {
   return (
-    <Link 
+    <Link
       href={`/projects/${project.slug}`}
       className={`block group ${featured ? 'lg:col-span-1' : ''}`}
     >
@@ -14,17 +14,13 @@ const ProjectCard = ({ project, featured = false }) => {
         ${featured ? 'lg:min-h-[400px]' : 'h-full'}
       `}>
         <div className={`relative ${featured ? 'h-56' : 'h-48'} w-full bg-gradient-to-br from-primary/10 to-primary/5`}>
-          {/* Placeholder for project image */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-2">
-                <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-              </div>
-              <span className="text-sm font-medium text-primary">View Project</span>
-            </div>
-          </div>
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes={featured ? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"}
+          />
           
           {/* Featured badge */}
           {featured && (

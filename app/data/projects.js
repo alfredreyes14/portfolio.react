@@ -1,49 +1,24 @@
 export const projectsData = [
   {
     id: 1,
-    slug: 'ecommerce-platform',
-    title: 'E-Commerce Platform',
-    description: 'A full-featured e-commerce platform with product management, cart, checkout, and payment integration.',
-    image: '/projects/ecommerce.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-    demoLink: 'https://example.com',
-    codeLink: 'https://github.com',
+    slug: 'homeqube',
+    title: 'Homeqube',
+    description: 'AI and blockchain powered platform that allows users to bid and build homes thru gamification.',
+    image: '/images/homeqube/homqube_thumbnail.png',
+    technologies: ['Next.js', 'Material UI', 'Styled Components', 'Monorepo', 'Solana', '.NET 7', 'SQL', 'Azure'],
+    codeLink: '#',
+    demoLink: 'https://www.homeqube.com/',
     featured: true,
-    duration: '4 months',
-    teamSize: '3 developers',
+    duration: '6 months',
+    teamSize: '10 developers',
     role: 'Full Stack Developer',
-    overview: `This comprehensive e-commerce platform was built to provide a seamless shopping experience for both customers and administrators. The platform includes advanced features like inventory management, order tracking, payment processing, and detailed analytics. Built with modern web technologies, it ensures scalability and maintainability while delivering excellent performance across all devices.`,
+    overview: `Homeqube is a proptech platform designed to tackle persistent inefficiencies and high costs in the traditional home-building industry by leveraging a modular, assemble-to-order approach that dramatically shortens lead times and lowers carbon emissions. Through its “knobs” system—predefined design modules that can be mixed and matched — Homeqube enables homeowners, architects, contractors, and suppliers to collaborate in a single, transparent marketplace, reducing middleman fees, logistics complexity, and material waste. By integrating AI-driven cost and lifestyle simulations with blockchain-backed transactions, the platform empowers users to explore customized home designs, earn and trade QUBE tokens for design contributions, and ultimately bring more affordable, sustainable housing solutions to market—helping to address the growing backlog of housing demand in Southeast Asia and beyond.`,
     gallery: [
-      {
-        title: 'Homepage Design',
-        description: 'Clean and modern homepage with featured products and categories',
-        image: '/projects/ecommerce/homepage.jpg'
-      },
-      {
-        title: 'Product Catalog',
-        description: 'Responsive product grid with filtering and sorting capabilities',
-        image: '/projects/ecommerce/catalog.jpg'
-      },
-      {
-        title: 'Shopping Cart',
-        description: 'Intuitive cart interface with quantity controls and price calculations',
-        image: '/projects/ecommerce/cart.jpg'
-      },
-      {
-        title: 'Checkout Process',
-        description: 'Streamlined checkout with multiple payment options',
-        image: '/projects/ecommerce/checkout.jpg'
-      },
-      {
-        title: 'Admin Dashboard',
-        description: 'Comprehensive admin panel for managing products and orders',
-        image: '/projects/ecommerce/admin.jpg'
-      },
-      {
-        title: 'Mobile Experience',
-        description: 'Fully responsive design optimized for mobile devices',
-        image: '/projects/ecommerce/mobile.jpg'
-      }
+      '/images/homeqube/homqube_thumbnail.png',
+      '/images/homeqube/homeqube2.jpg',
+      '/images/homeqube/homeqube3.jpg',
+      '/images/homeqube/homeqube4.jpg',
+      '/images/homeqube/homeqube5.jpg'
     ],
     features: [
       {
@@ -56,7 +31,7 @@ export const projectsData = [
       },
       {
         title: 'User Authentication',
-        description: 'Secure user registration, login, and profile management with JWT tokens.'
+        description: 'Secure user registration, login, and profile management with JWT tokens and blockchain authentication.'
       },
       {
         title: 'Order Management',
@@ -80,7 +55,7 @@ export const projectsData = [
       {
         title: 'Inventory Management',
         problem: 'Managing real-time inventory across multiple concurrent users to prevent overselling was complex.',
-        solution: 'Implemented optimistic locking with MongoDB transactions and created a reservation system that temporarily holds inventory during checkout process.'
+        solution: 'Implemented a reservation system that temporarily holds inventory during checkout process.'
       },
       {
         title: 'Performance Optimization',
@@ -321,156 +296,6 @@ export const projectsData = [
         title: 'GraphQL Performance',
         problem: 'N+1 query problems and performance issues with complex nested queries.',
         solution: 'Implemented DataLoader for batching and caching, along with query complexity analysis to prevent expensive operations.'
-      }
-    ]
-  },
-  {
-    id: 5,
-    slug: 'real-time-chat-app',
-    title: 'Real-Time Chat Application',
-    description: 'A modern chat application with real-time messaging, file sharing, and video calls.',
-    image: '/projects/chat.jpg',
-    technologies: ['React', 'Socket.io', 'Node.js', 'WebRTC'],
-    demoLink: 'https://example.com',
-    codeLink: 'https://github.com',
-    featured: false,
-    duration: '3 months',
-    teamSize: '3 developers',
-    role: 'Full Stack Developer',
-    overview: `A feature-rich real-time chat application supporting text messaging, file sharing, and video calls. Built with React and Socket.io, it provides a seamless communication experience with features like message encryption, typing indicators, and group chats. The application also includes video calling capabilities using WebRTC technology.`,
-    gallery: [
-      {
-        title: 'Chat Interface',
-        description: 'Clean and intuitive chat interface with real-time messaging',
-        image: '/projects/chat/interface.jpg'
-      },
-      {
-        title: 'Group Chats',
-        description: 'Multi-user group conversations with member management',
-        image: '/projects/chat/groups.jpg'
-      },
-      {
-        title: 'Video Calls',
-        description: 'Integrated video calling with screen sharing capabilities',
-        image: '/projects/chat/video.jpg'
-      },
-      {
-        title: 'File Sharing',
-        description: 'Easy file sharing with drag-and-drop functionality',
-        image: '/projects/chat/files.jpg'
-      }
-    ],
-    features: [
-      {
-        title: 'Real-time Messaging',
-        description: 'Instant message delivery with Socket.io for real-time communication.'
-      },
-      {
-        title: 'Video Calling',
-        description: 'Peer-to-peer video calls with WebRTC and screen sharing support.'
-      },
-      {
-        title: 'File Sharing',
-        description: 'Share files, images, and documents with preview capabilities.'
-      },
-      {
-        title: 'Group Chats',
-        description: 'Create and manage group conversations with member permissions.'
-      },
-      {
-        title: 'Message Encryption',
-        description: 'End-to-end encryption for secure private conversations.'
-      },
-      {
-        title: 'Typing Indicators',
-        description: 'Real-time typing indicators and message read receipts.'
-      }
-    ],
-    challenges: [
-      {
-        title: 'WebRTC Connection',
-        problem: 'Establishing reliable peer-to-peer connections across different network configurations.',
-        solution: 'Implemented STUN/TURN servers and connection fallback strategies to handle various NAT and firewall configurations.'
-      },
-      {
-        title: 'Message Ordering',
-        problem: 'Ensuring message ordering and delivery in high-traffic group chats.',
-        solution: 'Implemented vector clocks and server-side message ordering with acknowledgment systems to guarantee correct message sequence.'
-      }
-    ]
-  },
-  {
-    id: 6,
-    slug: 'booking-system',
-    title: 'Online Booking System',
-    description: 'A comprehensive booking system with calendar integration, notifications, and payment processing.',
-    image: '/projects/booking.jpg',
-    technologies: ['Next.js', 'Prisma', 'PostgreSQL', 'Stripe', 'Calendar API'],
-    demoLink: 'https://example.com',
-    codeLink: 'https://github.com',
-    featured: false,
-    duration: '4 months',
-    teamSize: '2 developers',
-    role: 'Full Stack Developer',
-    overview: `A comprehensive booking system designed for service businesses. Built with Next.js and Prisma, it provides calendar management, automated notifications, and secure payment processing. The system supports multiple services, staff scheduling, and customer management with a focus on user experience and business efficiency.`,
-    gallery: [
-      {
-        title: 'Booking Calendar',
-        description: 'Interactive calendar with availability and booking management',
-        image: '/projects/booking/calendar.jpg'
-      },
-      {
-        title: 'Service Selection',
-        description: 'Easy service selection with pricing and duration details',
-        image: '/projects/booking/services.jpg'
-      },
-      {
-        title: 'Payment Processing',
-        description: 'Secure payment integration with multiple payment methods',
-        image: '/projects/booking/payment.jpg'
-      },
-      {
-        title: 'Admin Dashboard',
-        description: 'Comprehensive admin panel for managing bookings and services',
-        image: '/projects/booking/admin.jpg'
-      }
-    ],
-    features: [
-      {
-        title: 'Calendar Integration',
-        description: 'Advanced calendar with availability management and conflict detection.'
-      },
-      {
-        title: 'Service Management',
-        description: 'Flexible service configuration with pricing, duration, and staff assignment.'
-      },
-      {
-        title: 'Payment Processing',
-        description: 'Secure payment handling with Stripe integration and multiple payment methods.'
-      },
-      {
-        title: 'Automated Notifications',
-        description: 'Email and SMS notifications for booking confirmations and reminders.'
-      },
-      {
-        title: 'Staff Scheduling',
-        description: 'Staff availability management with automatic assignment and workload balancing.'
-      },
-      {
-        title: 'Customer Management',
-        description: 'Customer profiles with booking history and preferences tracking.'
-      }
-    ],
-    challenges: [
-      {
-        title: 'Calendar Synchronization',
-        problem: 'Syncing with external calendar systems while preventing double bookings.',
-        solution: 'Implemented two-way sync with Google Calendar API using webhooks and conflict resolution algorithms to maintain calendar consistency.'
-      },
-      {
-        title: 'Timezone Handling',
-        problem: 'Managing bookings across different timezones for global customers.',
-        solution: 'Built a comprehensive timezone management system with automatic conversion and display in user\'s local time while storing UTC in database.'
       }
     ]
   }

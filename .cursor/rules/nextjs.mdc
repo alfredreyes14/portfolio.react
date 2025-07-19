@@ -1,7 +1,6 @@
 ---
-alwaysApply: true
+alwaysApply: false
 ---
-
 # Next.js Development Rules
 
 ## App Router Architecture (Next.js 13+)
