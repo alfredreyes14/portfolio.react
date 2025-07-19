@@ -3,6 +3,12 @@ import Link from 'next/link';
 import { projectsData } from '../../data/projects';
 import ProjectGallery from '../../components/ProjectGallery';
 
+export async function generateStaticParams() {
+  // Replace with your logic to fetch all slugs
+  const slugs = projectsData.map(project => project.slug);
+  return slugs.map(slug => ({ slug }));
+}
+
 const ProjectCaseStudy = ({ params }) => {
   const project = projectsData.find(p => p.slug === params.slug);
   
