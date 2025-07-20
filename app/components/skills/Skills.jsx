@@ -31,7 +31,8 @@ import {
   SiJest,
   SiOpenai,
   SiNuxtdotjs,
-  SiLaravel
+  SiLaravel,
+  SiDotnet
 } from 'react-icons/si';
 import { VscGithubAction } from 'react-icons/vsc';
 
@@ -55,8 +56,7 @@ const Skills = () => {
       { name: 'TypeScript', level: 85, icon: SiTypescript, color: '#3178C6' },
       { name: 'HTML/CSS', level: 90, icon: FaHtml5, color: '#E34F26' },
       { name: 'Tailwind CSS', level: 90, icon: SiTailwindcss, color: '#06B6D4' },
-      { name: 'Redux', level: 85, icon: SiRedux, color: '#764ABC' },
-      { name: 'GraphQL', level: 80, icon: SiGraphql, color: '#E10098' },
+      { name: 'Redux', level: 85, icon: SiRedux, color: '#764ABC' }
     ],
     backend: [
       { name: 'Node.js', level: 90, icon: FaNodeJs, color: '#339933' },
@@ -64,6 +64,7 @@ const Skills = () => {
       { name: 'Python', level: 80, icon: FaPython, color: '#3776AB' },
       { name: 'PHP', level: 70, icon: FaPhp, color: '#777BB4' },
       { name: 'Laravel', level: 75, icon: SiLaravel, color: '#FF2D20' },
+      { name: '.NET 7', level: 85, icon: SiDotnet, color: '#512BD4' },
       { name: 'GraphQL', level: 80, icon: SiGraphql, color: '#E10098' },
     ],
     database: [

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import theme from '../../theme';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Navbar = () => {
         {/* Branding */}
         <div className="flex items-center">
           <Link href="/" className="text-xl font-bold text-primary">
-            JDev
+            <Image src="/logo.png" alt="Logo" width={45} height={45} />
           </Link>
         </div>
 
@@ -28,6 +28,7 @@ const Navbar = () => {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#reviews">Testimonials</NavLink>
           <NavLink href="#contact">Contact</NavLink>
+          <NavLink href="https://drive.google.com/file/d/1sanlx2Fm0MQ9tGfU9TUXHXmfdPmpug_D/view?usp=sharing">Download CV</NavLink>
         </div>
 
         {/* Mobile Menu Button */}

@@ -10,8 +10,8 @@ const Footer = () => {
           </div>
 
           <div className="flex space-x-6">
-            <SocialLink href="https://github.com" icon={<GithubIcon />} label="GitHub" />
-            <SocialLink href="https://linkedin.com" icon={<LinkedinIcon />} label="LinkedIn" />
+            <SocialLink href="https://github.com/alfredreyes14" icon={<GithubIcon />} label="GitHub" />
+            <SocialLink href="https://www.linkedin.com/in/jreyesdev" icon={<LinkedinIcon />} label="LinkedIn" />
           </div>
         </div>
       </div>

@@ -48,13 +48,21 @@ const Reviews = () => {
       review: 'I\'ve worked with Alfred for almost my entire career. I\'ve seen him excel at both front-end and back-end aspects of web development. He demonstrated excellent technical and soft skills, earning him the position of Team Lead on our previous company. I have no hesitation in recommending Alfred, he will be an asset to any organization.',
       rating: 5,
     },
+    {
+      id: 6,
+      name: 'Lynda Gaughan',
+      position: 'Executive Vice President, Go Destination Services',
+      image: 'https://media.licdn.com/dms/image/v2/C5603AQFT51mO8ph_pw/profile-displayphoto-shrink_100_100/profile-displayphoto-shrink_100_100/0/1600969010247?e=1755734400&v=beta&t=OKR00vQsQy_ueZU_OA3av-jYE2cixnP8IQ64b897UTs',
+      review: 'Alfred, I have been very happy with your work. You have shown quick understanding of our needs and I like your designs and efficiency on the UI to make things better for our processes.',
+      rating: 5,
+    }
   ];
   
   // Auto-advance reviews
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % reviews.length);
-    }, 5000);
+    }, 10000);
     
     return () => clearInterval(interval);
   }, [reviews.length]);

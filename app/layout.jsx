@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Senior Full Stack Developer Portfolio",
   description: "Professional portfolio showcasing skills, experience, and projects",
+  icons: {
+    icon: '/logo.png?v=1',
+    apple: '/logo.png?v=2',
+  },
 };
 
 export default function RootLayout({ children }) {
