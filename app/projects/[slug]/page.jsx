@@ -9,6 +9,7 @@ export async function generateStaticParams() {
   return slugs.map(slug => ({ slug }));
 }
 
+
 const ProjectCaseStudy = ({ params }) => {
   const project = projectsData.find(p => p.slug === params.slug);
   
