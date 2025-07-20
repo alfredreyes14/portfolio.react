@@ -52,6 +52,7 @@ const Navbar = () => {
             <MobileNavLink href="#projects" onClick={toggleMenu}>Projects</MobileNavLink>
             <MobileNavLink href="#reviews" onClick={toggleMenu}>Reviews</MobileNavLink>
             <MobileNavLink href="#contact" onClick={toggleMenu}>Contact</MobileNavLink>
+            <NavLink href="https://drive.google.com/file/d/1sanlx2Fm0MQ9tGfU9TUXHXmfdPmpug_D/view?usp=sharing">Download CV</NavLink>
           </div>
         </div>
       )}
