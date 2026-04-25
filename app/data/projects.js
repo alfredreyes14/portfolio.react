@@ -135,11 +135,17 @@ export const projectsData = [
     overview: 'NorthStar CRM is a rebuild of the old system that was acquired by Go Destination services. The CRM what powers the whole business and operations of the company. It features order creation, tracking, client tracking, form builders, report generation, client tracking and management as well as microsoft integrations. The app is used by over 100+ program managers as well as few hundred consultants around the globe.',
     gallery: [
       '/images/nsvip/nsvip_thumbnail.png',
-      '/images/nsvip/nsvip1.png',
-      '/images/nsvip/nsvip2.png',
-      '/images/nsvip/nsvip3.png',
-      '/images/nsvip/nsvip4.png',
-      '/images/nsvip/nsvip5.png'
+      '/images/nsvip/go1.png',
+      '/images/nsvip/go2.png',
+      '/images/nsvip/go3.png',
+      '/images/nsvip/go4.png',
+      '/images/nsvip/go5.png',
+      '/images/nsvip/go6.png',
+      '/images/nsvip/go7.png',
+      '/images/nsvip/go8.png',
+      '/images/nsvip/go9.png',
+      '/images/nsvip/go10.png',
+      '/images/nsvip/go11.png'
     ],
     features: [
       {
@@ -193,6 +199,11 @@ export const projectsData = [
         title: 'Role based access control',
         problem: 'The old system had no role based access control.',
         solution: 'The new system is designed to have role based access control. This is made possible by utilizing AWS Cognito to manage the users and their roles.'
+      },
+      {
+        title: 'Dynamic Reports',
+        problem: 'The old system has a lot of ongoing reports that needs to be migrated and to the new system. The report data has a varying shape, structure, and format',
+        solution: 'The new system\'s  way of handling new and old reports thru a config driven approach. This allows for easy, quick and efficient migration of reports.'
       }
     ]
   }
