@@ -1,0 +1,42 @@
+export const siteConfig = {
+  name: 'John Alfred Reyes',
+  shortName: 'John Reyes',
+  jobTitle: 'Full Stack Engineer',
+  domain: 'alfreddev.com',
+  url: 'https://alfreddev.com',
+  email: 'john.alfredrys@gmail.com',
+  phone: '+639 61 037 9728',
+  location: {
+    locality: 'Taguig City',
+    region: 'Metro Manila',
+    country: 'Philippines',
+    countryCode: 'PH',
+  },
+  description:
+    'John Alfred Reyes is a full stack engineer building scalable web applications with React, Next.js, Node.js, and modern product-focused engineering practices.',
+  ogImage: '/images/dp.jpg',
+  keywords: [
+    'John Alfred Reyes',
+    'John Alfred Reyes portfolio',
+    'full stack engineer',
+    'full stack developer',
+    'React developer',
+    'Next.js developer',
+    'Node.js developer',
+    'JavaScript developer',
+    'TypeScript developer',
+    'software engineer Philippines',
+    'Senior Full Stack Engineer',
+    'Full Stack Engineer',
+    'Full Stack Developer',
+    'Full Stack Web Developer',
+    'Full Stack Web Developer Philippines',
+    'Full Stack Web Developer in the Philippines',
+    'Lead Full Stack Engineer',
+    'AI Driven Developer'
+  ],
+  sameAs: [
+    'https://github.com/alfredreyes14',
+    'https://www.linkedin.com/in/jreyesdev',
+  ],
+};

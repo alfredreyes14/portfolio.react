@@ -1,7 +1,8 @@
 import { projectsData } from './data/projects';
+import { siteConfig } from './data/site';
 
 export default function sitemap() {
-  const baseUrl = 'https://alfreddev.com';
+  const baseUrl = siteConfig.url;
   
   // Static pages
   const staticPages = [

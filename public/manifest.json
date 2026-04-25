@@ -1,10 +1,10 @@
 {
-  "name": "Senior Full Stack Developer Portfolio",
-  "short_name": "Portfolio",
-  "description": "Professional portfolio showcasing full stack development skills, experience, and innovative projects",
+  "name": "John Alfred Reyes",
+  "short_name": "John Reyes",
+  "description": "Portfolio of John Alfred Reyes, full stack engineer building modern web applications.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#ffffff",
+  "background_color": "#000000",
   "theme_color": "#000000",
   "orientation": "portrait-primary",
   "icons": [

@@ -31,7 +31,7 @@ const Navbar = () => {
           <NavLink href="#projects" isHomepage={isHomepage}>Projects</NavLink>
           <NavLink href="#reviews" isHomepage={isHomepage}>Testimonials</NavLink>
           <NavLink href="#contact" isHomepage={isHomepage}>Contact</NavLink>
-          <NavLink href="https://drive.google.com/file/d/1sanlx2Fm0MQ9tGfU9TUXHXmfdPmpug_D/view?usp=sharing" isHomepage={isHomepage}>Download CV</NavLink>
+          <NavLink href="/John_Alfred_Reyes_CV.pdf" isHomepage={isHomepage}>Download CV</NavLink>
         </div>
 
         {/* Mobile Menu Button */}
@@ -55,7 +55,7 @@ const Navbar = () => {
             <MobileNavLink href="#projects" onClick={toggleMenu} isHomepage={isHomepage}>Projects</MobileNavLink>
             <MobileNavLink href="#reviews" onClick={toggleMenu} isHomepage={isHomepage}>Reviews</MobileNavLink>
             <MobileNavLink href="#contact" onClick={toggleMenu} isHomepage={isHomepage}>Contact</MobileNavLink>
-            <MobileNavLink href="https://drive.google.com/file/d/1sanlx2Fm0MQ9tGfU9TUXHXmfdPmpug_D/view?usp=sharing" isHomepage={isHomepage}>Download CV</MobileNavLink>
+            <MobileNavLink href="/John_Alfred_Reyes_CV.pdf" isHomepage={isHomepage}>Download CV</MobileNavLink>
           </div>
         </div>
       )}
@@ -64,9 +64,11 @@ const Navbar = () => {
 };
 
 const NavLink = ({ href, children, isHomepage }) => {
+  const isExternal = href.startsWith('http') || href.endsWith('.pdf');
+
   const getHref = () => {
     // If it's an external link (like CV download), return as-is
-    if (href.startsWith('http')) {
+    if (isExternal) {
       return href;
     }
     
@@ -80,16 +82,23 @@ const NavLink = ({ href, children, isHomepage }) => {
   };
 
   return (
-    <Link href={getHref()} className="text-foreground hover:text-primary font-medium transition-colors duration-200">
+    <Link
+      href={getHref()}
+      className="text-foreground hover:text-primary font-medium transition-colors duration-200"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
+    >
       {children}
     </Link>
   );
 };
 
 const MobileNavLink = ({ href, onClick, children, isHomepage }) => {
+  const isExternal = href.startsWith('http') || href.endsWith('.pdf');
+
   const getHref = () => {
     // If it's an external link (like CV download), return as-is
-    if (href.startsWith('http')) {
+    if (isExternal) {
       return href;
     }
     
@@ -106,6 +115,8 @@ const MobileNavLink = ({ href, onClick, children, isHomepage }) => {
     <Link 
       href={getHref()} 
       className="text-foreground hover:text-primary font-medium transition-colors duration-200 px-4 py-2"
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noopener noreferrer' : undefined}
       onClick={onClick}
     >
       {children}

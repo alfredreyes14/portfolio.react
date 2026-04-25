@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { projectsData } from '../../data/projects';
 import ProjectGallery from '../../components/ProjectGallery';
+import { siteConfig } from '../../data/site';
 
 export async function generateStaticParams() {
   // Replace with your logic to fetch all slugs
@@ -10,7 +11,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const project = projectsData.find(p => p.slug === params.slug);
+  const { slug } = await params;
+  const project = projectsData.find(p => p.slug === slug);
   
   if (!project) {
     return {
@@ -19,14 +21,14 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const projectUrl = `https://alfreddev.com/projects/${project.slug}`;
+  const projectUrl = `${siteConfig.url}/projects/${project.slug}`;
 
   return {
     title: `${project.title} - Case Study`,
     description: project.description,
-    keywords: [...project.technologies, 'case study', 'project', 'development', 'portfolio'],
+    keywords: [...project.technologies, siteConfig.name, 'case study', 'project', 'portfolio'],
     openGraph: {
-      title: `${project.title} - Case Study | Full Stack Developer Portfolio`,
+      title: `${project.title} | ${siteConfig.name}`,
       description: project.description,
       url: projectUrl,
       type: 'article',
@@ -39,14 +41,14 @@ export async function generateMetadata({ params }) {
         },
       ],
       article: {
-        author: 'John Alfred Reyes',
+        author: siteConfig.name,
         section: 'Portfolio',
         tag: project.technologies,
       },
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${project.title} - Case Study`,
+      title: `${project.title} | ${siteConfig.name}`,
       description: project.description,
       images: [project.image],
     },
@@ -56,8 +58,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-const ProjectCaseStudy = ({ params }) => {
-  const project = projectsData.find(p => p.slug === params.slug);
+const ProjectCaseStudy = async ({ params }) => {
+  const { slug } = await params;
+  const project = projectsData.find(p => p.slug === slug);
   
   if (!project) {
     notFound();
@@ -70,12 +73,23 @@ const ProjectCaseStudy = ({ params }) => {
     "name": project.title,
     "description": project.description,
     "image": project.image,
-    "url": `https://alfreddev.com/projects/${project.slug}`,
+    "url": `${siteConfig.url}/projects/${project.slug}`,
     "author": {
       "@type": "Person",
-      "name": "John Alfred Reyes",
-      "jobTitle": "Senior Full Stack Developer",
-      "url": "https://alfreddev.com"
+      "name": siteConfig.name,
+      "jobTitle": siteConfig.jobTitle,
+      "url": siteConfig.url,
+      "email": siteConfig.email
+    },
+    "creator": {
+      "@type": "Person",
+      "name": siteConfig.name,
+      "url": siteConfig.url
+    },
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": siteConfig.name,
+      "url": siteConfig.url
     },
     "dateCreated": "2024",
     "keywords": project.technologies.join(", "),

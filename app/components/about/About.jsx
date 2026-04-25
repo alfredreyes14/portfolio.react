@@ -1,4 +1,5 @@
 import SectionHeading from '../ui/SectionHeading';
+import { profileSnapshot } from '../../data/profile';
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row gap-10">
           <div className="md:w-1/2">
             <p className="text-foreground mb-4">
-              I’m a Senior Full Stack Engineer with {new Date().getFullYear() - 2019} years of experience building scalable, high-quality web applications, cloud-based solutions, and automation tools. My work focuses on turning business goals into reliable products, from full stack development and API design to performance optimization, cloud deployment, and workflow automation.
+              I’m a Senior Full Stack Engineer with {profileSnapshot.yearsOfExperience} years of experience building scalable, high-quality web applications, cloud-based solutions, and automation tools. My work focuses on turning business goals into reliable products, from full stack development and API design to performance optimization, cloud deployment, and workflow automation.
             </p>
             <p className="text-foreground mb-4">
               I specialize in the MERN stack, modern JavaScript frameworks, and AWS, with hands-on experience across React, Next.js, Node.js, TypeScript, databases, serverless architecture, third-party integrations, and the OpenAI API. I also use AI-driven development tools in my day-to-day workflow to speed up implementation, improve code quality, explore solutions faster, and deliver better results more efficiently.
@@ -25,7 +26,7 @@ const About = () => {
               <AboutItem label="Email" value="john.alfredrys@gmail.com" />
               <AboutItem label="Location" value="Metro Manila, Philippines" />
               <AboutItem label="Degree" value="BS Information Technology" />
-              <AboutItem label="Experience" value={new Date().getFullYear() - 2019 + " years"} />
+              <AboutItem label="Experience" value={`${profileSnapshot.yearsOfExperience} years`} />
               <AboutItem label="Freelance" value="Available" />
             </div>
           </div>

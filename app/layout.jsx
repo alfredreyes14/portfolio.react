@@ -1,18 +1,20 @@
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
+import { siteConfig } from "./data/site";
 
 export const metadata = {
-  metadataBase: new URL('https://alfreddev.com'),
+  metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Senior Full Stack Developer Portfolio | Professional Software Development",
-    template: "%s | Full Stack Developer Portfolio"
+    default: `${siteConfig.name} | ${siteConfig.jobTitle}`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: "Professional portfolio showcasing full stack development skills, experience, and innovative projects. Specializing in React, Next.js, Node.js, and modern web technologies.",
-  keywords: ["full stack developer", "react developer", "next.js", "javascript", "typescript", "node.js", "web development", "software engineer", "portfolio"],
-  authors: [{ name: "John Alfred Reyes" }],
-  creator: "John Alfred Reyes",
-  publisher: "John Alfred Reyes",
+  description: siteConfig.description,
+  applicationName: siteConfig.name,
+  keywords: siteConfig.keywords,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   robots: {
     index: true,
     follow: true,
@@ -27,24 +29,30 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://alfreddev.com',
-    title: 'Senior Full Stack Developer Portfolio | Professional Software Development',
-    description: 'Professional portfolio showcasing full stack development skills, experience, and innovative projects. Specializing in React, Next.js, Node.js, and modern web technologies.',
-    siteName: 'Full Stack Developer Portfolio',
+    url: siteConfig.url,
+    title: `${siteConfig.name} | ${siteConfig.jobTitle}`,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
     images: [
       {
-        url: '/images/dp.jpg', // Create this image (1200x630px recommended)
+        url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Senior Full Stack Developer Portfolio',
+        alt: `${siteConfig.name} portrait for social sharing`,
       },
     ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${siteConfig.name} | ${siteConfig.jobTitle}`,
+    description: siteConfig.description,
+    images: [siteConfig.ogImage],
   },
   verification: {
     google: 'google-site-verification=sujTxwyZsFRduW48n9fAUNl7WrAGqLzvWx7GH1Obicg',
   },
   alternates: {
-    canonical: 'https://alfreddev.com',
+    canonical: siteConfig.url,
   },
   icons: {
     icon: [
@@ -58,6 +66,11 @@ export const metadata = {
   },
   manifest: '/manifest.json',
   category: 'technology',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -65,6 +78,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta name="theme-color" content="#000000" />
+        <meta name="apple-mobile-web-app-title" content={siteConfig.shortName} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="antialiased min-h-screen flex flex-col">

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import SectionHeading from '../ui/SectionHeading';
+import { toRgba } from './color-utils.mjs';
 import { 
   FaReact, 
   FaJs, 
@@ -139,7 +140,7 @@ const SkillCard = ({ skill }) => {
       <div className="flex items-center gap-4">
         <div 
           className="p-4 rounded-lg"
-          style={{ backgroundColor: `${color}20` }}
+          style={{ backgroundColor: toRgba(color, 0.125) }}
         >
           <Icon 
             className="text-3xl" 

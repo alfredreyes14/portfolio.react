@@ -1,3 +1,5 @@
+import { siteConfig } from './data/site';
+
 export default function robots() {
   return {
     rules: {
@@ -5,6 +7,7 @@ export default function robots() {
       allow: '/',
       disallow: ['/api/', '/admin/'], // Add any paths you want to exclude
     },
-    sitemap: 'https://alfreddev.com/sitemap.xml', // Update with your actual domain
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+    host: siteConfig.url,
   };
 } 
