@@ -16,7 +16,7 @@ const Hero = () => {
               Senior Full Stack Developer
             </h2>
             <p className="text-foreground mb-8 max-w-lg">
-            I&apos;m a senior full stack engineer with {profileSnapshot.yearsOfExperience} years of experience designing, building, and delivering reliable, user-friendly applications using modern JavaScript technologies and cloud architecture. I focus on creating high-quality solutions that are clean, maintainable, and built to grow. Beyond writing code, I bring leadership experience in guiding technical decisions, improving development workflows, and helping teams ship better products with confidence.
+            I&apos;m a Senior Full Stack Engineer with {profileSnapshot.yearsOfExperience} years of experience designing, building, and delivering reliable, user-friendly applications using modern JavaScript technologies and cloud architecture. I focus on creating high-quality solutions that are clean, maintainable, and built to grow. Beyond writing code, I bring leadership experience in guiding technical decisions, improving development workflows, and helping teams ship better products with confidence.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button href="#contact" primary>
