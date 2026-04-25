@@ -5,9 +5,28 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      company: 'Freelance',
+      position: 'Full Stack Engineer',
+      period: '2025 - Present',
+      location: 'Remote',
+      description: 'I now work as a freelance Full Stack Engineer, helping businesses build high-quality, scalable, and maintainable software systems. My focus is on delivering solutions that are not only functional, but also reliable, secure, and aligned with real business goals. \n\n Beyond writing code, I bring a leadership-driven approach to every engagement—guiding technical direction, improving development workflows, and helping teams make better engineering decisions. I value clear communication, strong execution, and building systems that can grow with the business.',
+      responsibilities: [
+        'Led a team of developers to build a high-quality custom CRM for a client in the US',
+        'Turned business requirements into technical solutions, ensuring the system is scalable, maintainable, and aligned with the client\'s business goals.',
+        'Improved development workflows, ensuring the team is productive and efficient.',
+        'Helped the team make better engineering decisions, ensuring the system is technically sound and aligned with the best practices.',
+        'Provided technical guidance and mentorship to the team, ensuring they are able to build the system themselves.',
+        'Ensured the system is secure and compliant with the latest security best practices.',
+        'Ensured the system is scalable and can grow with the business.',
+        'Ensured the system is maintainable and can be updated easily.',
+        'Ensured the system is aligned with the latest technologies and best practices.',
+      ]
+    },
+    {
+      id: 2,
       company: 'Unicty International',
       position: 'Sr. Full Stack Engineer',
-      period: '2024 - Present',
+      period: '2024 - 2025',
       location: 'Taguig City, Philippines - Hybrid',
       description: 'Developed a distributor tool that to help distributors manage and grow their business and organization. \n\n Streamlined and improve processes through automation and AI.',
       responsibilities: [
@@ -19,7 +38,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       company: 'Cognization Softvision',
       position: 'Software Engineer',
       location: 'Makati City, Philippines - Hybrid',
@@ -32,7 +51,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 3,
+      id: 4,
       company: 'Locale Europe LTD (Through Cloud Employee Inc. * Lay-off)',
       position: 'Full Stack Engineer',
       location: 'Greater London, UK - Remote (From Philippines)',
@@ -46,7 +65,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 4,
+      id: 5,
       company: 'Yondu Inc',
       position: 'Software Engineer',
       location: 'Taguig City, Philippines - Remote',
@@ -58,7 +77,7 @@ const Experience = () => {
       ]
     },
     {
-      id: 5,
+      id: 6,
       company: 'Cafe24 Philippines',
       position: 'Web Developer',
       location: 'Pasig City, Philippines',
