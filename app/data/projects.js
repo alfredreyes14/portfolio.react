@@ -6,7 +6,7 @@ export const projectsData = [
     description: 'AI and blockchain powered platform that allows users to bid and build homes thru gamification.',
     image: '/images/homeqube/homqube_thumbnail.png',
     technologies: ['Next.js', 'Material UI', 'Styled Components', 'Monorepo', 'Solana', '.NET 7', 'SQL', 'Azure'],
-    demoLink: 'https://www.homeqube.com/',
+    demoLink: 'https://homeqube.tech/',
     featured: true,
     duration: '6 months',
     teamSize: '10 developers',

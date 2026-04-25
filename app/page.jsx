@@ -15,7 +15,7 @@ export default function Home() {
     "jobTitle": "Senior Full Stack Developer",
     "description": "Professional full stack developer specializing in React, Next.js, Node.js, and modern web technologies.",
     "url": "https://alfreddev.com",
-    "email": "alfred@alfreddev.com",
+    "email": "john.alfredrys@gmail.com",
     "telephone": "+639 61 037 9728",
     "address": {
       "@type": "PostalAddress",

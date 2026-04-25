@@ -101,8 +101,8 @@ const Contact = () => {
                 <ContactInfo
                   icon={<EmailIcon />}
                   title="Email"
-                  content="alfred@alfreddev.com / john.alfredrys@gmail.com"
-                  href="mailto:alfred@alfreddev.com"
+                  content="john.alfredrys@gmail.com"
+                  href="mailto:john.alfredrys@gmail.com"
                 />
                 <ContactInfo
                   icon={<PhoneIcon />}
