@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <span className="text-primary font-medium">Hello, I'm</span>
+            <span className="text-primary font-medium">Hello, I&apos;m</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mt-2 mb-4">
               John Alfred Reyes
             </h1>
@@ -15,7 +15,7 @@ const Hero = () => {
               Senior Full Stack Developer
             </h2>
             <p className="text-foreground mb-8 max-w-lg">
-              I'm a passionate full stack developer with over 6 years of experience 
+              I&apos;m a passionate full stack developer with over 6 years of experience 
               building robust, scalable, and user-friendly full stack web applications. 
               I specialize in modern JavaScript frameworks, cloud architecture, 
               and delivering exceptional user experiences.

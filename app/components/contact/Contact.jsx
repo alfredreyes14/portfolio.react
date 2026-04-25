@@ -94,7 +94,7 @@ const Contact = () => {
               <h3 className="text-xl font-bold mb-4">Get In Touch</h3>
               <p className="text-foreground mb-6">
                 Have a project in mind or want to discuss potential opportunities? Feel free to reach out.
-                I'm open to freelance work, full-time positions, or just connecting with fellow developers.
+                I&apos;m open to freelance work, full-time positions, or just connecting with fellow developers.
               </p>
 
               <div className="space-y-4">

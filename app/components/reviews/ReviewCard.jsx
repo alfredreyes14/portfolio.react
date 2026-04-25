@@ -28,7 +28,7 @@ const ReviewCard = ({ review }) => {
         </div>
         
         <blockquote className="text-foreground mb-6 italic">
-          "{review.review}"
+          &ldquo;{review.review}&rdquo;
         </blockquote>
         
         <div>
