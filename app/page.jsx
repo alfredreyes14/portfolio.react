@@ -8,7 +8,7 @@ import Contact from './components/contact/Contact';
 import { siteConfig } from './data/site';
 
 export const metadata = {
-  title: 'Portfolio',
+  title: 'John Alfred Reyes - Portfolio',
   description: siteConfig.description,
   alternates: {
     canonical: siteConfig.url,

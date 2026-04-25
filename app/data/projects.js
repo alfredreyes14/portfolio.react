@@ -129,7 +129,7 @@ export const projectsData = [
     image: '/images/nsvip/nsvip_thumbnail.png',
     technologies: ['React.js', 'Node.js', 'Java Spring Boot', 'AWS', 'MySQL'],
     featured: false,
-    duration: 'On-going',
+    duration: '1 year 5 months',
     teamSize: '5 developers',
     role: 'Tech Lead / Project Manager',
     overview: 'NorthStar CRM is a rebuild of the old system that was acquired by Go Destination services. The CRM what powers the whole business and operations of the company. It features order creation, tracking, client tracking, form builders, report generation, client tracking and management as well as microsoft integrations. The app is used by over 100+ program managers as well as few hundred consultants around the globe.',
