@@ -12,7 +12,8 @@ import {
   FaDocker, 
   FaAws, 
   FaGitAlt,
-  FaDatabase
+  FaDatabase,
+  FaVuejs
 } from 'react-icons/fa';
 import { 
   SiNextdotjs, 
@@ -32,9 +33,11 @@ import {
   SiOpenai,
   SiNuxtdotjs,
   SiLaravel,
-  SiDotnet
+  SiDotnet,
+  SiSupabase,
+  SiClaude
 } from 'react-icons/si';
-import { VscGithubAction } from 'react-icons/vsc';
+import { VscCode, VscGithubAction } from 'react-icons/vsc';
 
 const Skills = () => {
   const [activeTab, setActiveTab] = useState('frontend');
@@ -52,6 +55,7 @@ const Skills = () => {
       { name: 'React', level: 95, icon: FaReact, color: '#61DAFB' },
       { name: 'Next.js', level: 90, icon: SiNextdotjs, color: '#000000' },
       { name: 'Nuxt.js', level: 80, icon: SiNuxtdotjs, color: '#00DC82' },
+      { name: 'Vue3', level: 80, icon: FaVuejs, color: '#4FC08D' },
       { name: 'JavaScript', level: 95, icon: FaJs, color: '#F7DF1E' },
       { name: 'TypeScript', level: 85, icon: SiTypescript, color: '#3178C6' },
       { name: 'HTML/CSS', level: 90, icon: FaHtml5, color: '#E34F26' },
@@ -71,6 +75,7 @@ const Skills = () => {
       { name: 'MongoDB', level: 85, icon: SiMongodb, color: '#47A248' },
       { name: 'PostgreSQL', level: 80, icon: SiPostgresql, color: '#336791' },
       { name: 'MySQL', level: 85, icon: SiMysql, color: '#4479A1' },
+      { name: 'Supabase', level: 80, icon: SiSupabase, color: '#3ECF8E' },
       { name: 'T-SQL', level: 75, icon: FaDatabase, color: '#CC2927' },
       { name: 'Firebase', level: 75, icon: SiFirebase, color: '#FFCA28' },
       { name: 'Redis', level: 70, icon: SiRedis, color: '#DC382D' },
@@ -85,6 +90,8 @@ const Skills = () => {
     ],
     tools: [
       { name: 'Git', level: 95, icon: FaGitAlt, color: '#F05032' },
+      { name: 'Cursor', level: 85, icon: VscCode, color: '#007ACC' },
+      { name: 'Claude Code', level: 85, icon: SiClaude, color: '#D97757' },
       { name: 'Jira', level: 80, icon: SiJira, color: '#0052CC' },
       { name: 'Jest/Testing', level: 80, icon: SiJest, color: '#C21325' },
       { name: 'OpenAI', level: 85, icon: SiOpenai, color: '#412991' },
