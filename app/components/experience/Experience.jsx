@@ -6,10 +6,10 @@ const Experience = () => {
     {
       id: 1,
       company: 'Freelance',
-      position: 'Full Stack Engineer',
+      position: 'Sr. Full Stack Engineer',
       period: '2025 - Present',
       location: 'Remote',
-      description: 'I now work as a freelance Full Stack Engineer, helping businesses build high-quality, scalable, and maintainable software systems. My focus is on delivering solutions that are not only functional, but also reliable, secure, and aligned with real business goals. \n\n Beyond writing code, I bring a leadership-driven approach to every engagement—guiding technical direction, improving development workflows, and helping teams make better engineering decisions. I value clear communication, strong execution, and building systems that can grow with the business.',
+      description: 'I now work as a freelance Sr. Full Stack Engineer, helping businesses build high-quality, scalable, and maintainable software systems. My focus is on delivering solutions that are not only functional, but also reliable, secure, and aligned with real business goals. \n\n Beyond writing code, I bring a leadership-driven approach to every engagement—guiding technical direction, improving development workflows, and helping teams make better engineering decisions. I value clear communication, strong execution, and building systems that can grow with the business.',
       responsibilities: [
         'Led a team of developers to build a high-quality custom CRM for a client in the US',
         'Turned business requirements into technical solutions, ensuring the system is scalable, maintainable, and aligned with the client\'s business goals.',
