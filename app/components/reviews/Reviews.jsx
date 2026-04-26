@@ -124,7 +124,7 @@ const Reviews = () => {
               <button
                 key={index}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  activeIndex === index ? 'bg-primary' : 'bg-gray-300 dark:bg-gray-700'
+                  activeIndex === index ? 'bg-primary' : 'bg-gray-600'
                 }`}
                 onClick={() => handleDotClick(index)}
                 aria-label={`Go to review ${index + 1}`}

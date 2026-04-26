@@ -75,7 +75,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <meta name="theme-color" content="#000000" />
         <meta name="apple-mobile-web-app-title" content={siteConfig.shortName} />

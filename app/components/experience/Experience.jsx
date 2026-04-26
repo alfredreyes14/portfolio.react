@@ -97,7 +97,7 @@ const Experience = () => {
         
         <div className="relative">
           {/* Timeline line */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-800"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-800"></div>
           
           <div className="space-y-12">
             {experiences.map((experience, index) => (

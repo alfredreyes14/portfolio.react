@@ -6,7 +6,7 @@ const ExperienceItem = ({ experience, isEven }) => {
       
       {/* Content */}
       <div className={`md:w-1/2 ${isEven ? 'md:pr-12' : 'md:pl-12 md:ml-auto'}`}>
-        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+        <div className="bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
           <div className="flex flex-col">
             <span className="text-primary font-semibold">{experience.period}</span>
             <h3 className="text-xl font-bold mt-1">{experience.position}</h3>
@@ -27,7 +27,7 @@ const ExperienceItem = ({ experience, isEven }) => {
       {/* Mobile view - timeline dot and line */}
       <div className="md:hidden flex items-center mb-4">
         <div className="w-4 h-4 rounded-full bg-primary mr-3"></div>
-        <div className="flex-1 h-0.5 bg-gray-200 dark:bg-gray-700"></div>
+        <div className="flex-1 h-0.5 bg-gray-700"></div>
       </div>
     </div>
   );

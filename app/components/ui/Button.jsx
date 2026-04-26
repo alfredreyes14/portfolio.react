@@ -11,7 +11,7 @@ const Button = ({
 }) => {
   const baseStyles = "inline-block px-6 py-3 font-medium text-sm rounded-md transition-all duration-200 focus:outline-none";
   const primaryStyles = "bg-primary text-white hover:bg-primary/90";
-  const secondaryStyles = "bg-transparent border border-foreground text-foreground hover:bg-white/10 dark:hover:bg-white/10";
+  const secondaryStyles = "bg-transparent border border-foreground text-foreground hover:bg-white/10";
   
   const styles = `${baseStyles} ${primary ? primaryStyles : secondaryStyles} ${className}`;
 

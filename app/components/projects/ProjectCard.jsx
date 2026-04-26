@@ -8,9 +8,9 @@ const ProjectCard = ({ project, featured = false }) => {
       className={`block group ${featured ? 'lg:col-span-1' : ''}`}
     >
       <div className={`
-        bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
+        bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-xl 
         transition-all duration-300 transform hover:-translate-y-1 cursor-pointer
-        border border-gray-200 dark:border-gray-700 hover:border-primary/50
+        border border-gray-700 hover:border-primary/50
         ${featured ? 'lg:min-h-[400px]' : 'h-full'}
       `}>
         <div className={`relative ${featured ? 'h-56' : 'h-48'} w-full bg-gradient-to-br from-primary/10 to-primary/5`}>
@@ -35,7 +35,7 @@ const ProjectCard = ({ project, featured = false }) => {
         
         <div className={`p-6 ${featured ? 'lg:p-8' : ''}`}>
           <div className="flex justify-between items-start mb-3">
-            <h3 className={`font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors ${featured ? 'text-2xl' : 'text-xl'}`}>
+            <h3 className={`font-bold text-white group-hover:text-primary transition-colors ${featured ? 'text-2xl' : 'text-xl'}`}>
               {project.title}
             </h3>
             <svg className="w-5 h-5 text-gray-400 group-hover:text-primary transition-colors ml-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -43,7 +43,7 @@ const ProjectCard = ({ project, featured = false }) => {
             </svg>
           </div>
           
-          <p className={`text-gray-600 dark:text-gray-300 mb-4 ${featured ? 'text-lg leading-relaxed' : 'text-base'}`}>
+          <p className={`text-gray-300 mb-4 ${featured ? 'text-lg leading-relaxed' : 'text-base'}`}>
             {project.description}
           </p>
           

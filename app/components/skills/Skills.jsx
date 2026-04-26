@@ -100,7 +100,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-background">
+    <section id="skills" className="py-20 bg-gray-950">
       <div className="container mx-auto px-4">
         <SectionHeading>Skills</SectionHeading>
         
@@ -111,8 +111,8 @@ const Skills = () => {
                 key={category.id}
                 className={`px-6 py-3 rounded-lg transition-all duration-300 font-medium ${
                   activeTab === category.id
-                    ? 'bg-primary text-white shadow-lg transform scale-105'
-                    : 'bg-gray-200 dark:bg-gray-800 text-foreground hover:bg-gray-300 dark:hover:bg-gray-700 hover:transform hover:scale-105'
+                    ? 'bg-sky-600 text-white shadow-lg hover:bg-sky-500 transform scale-105'
+                    : 'bg-gray-900 border border-gray-800 text-foreground hover:bg-gray-800 hover:transform hover:scale-105'
                 }`}
                 onClick={() => setActiveTab(category.id)}
               >
@@ -136,7 +136,7 @@ const SkillCard = ({ skill }) => {
   const { name, icon: Icon, color } = skill;
   
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
+    <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105">
       <div className="flex items-center gap-4">
         <div 
           className="p-4 rounded-lg"

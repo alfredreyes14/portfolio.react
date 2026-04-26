@@ -115,10 +115,10 @@ const ProjectCaseStudy = async ({ params }) => {
         <section className="py-20 bg-gradient-to-br from-primary/10 to-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 {project.title}
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                 {project.description}
               </p>
               
@@ -155,7 +155,7 @@ const ProjectCaseStudy = async ({ params }) => {
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group inline-flex items-center px-8 py-4 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200 dark:border-gray-600 hover:border-primary dark:hover:border-primary hover:bg-gray-50 dark:hover:bg-gray-700"
+                      className="group inline-flex items-center px-8 py-4 bg-gray-800 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-600 hover:border-primary hover:bg-gray-700"
                     >
                       <svg className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -172,16 +172,16 @@ const ProjectCaseStudy = async ({ params }) => {
         <ProjectGallery project={project} />
 
         {/* Project Overview */}
-        <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2">
-                  <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                  <h2 className="text-3xl font-bold text-white mb-6">
                     Project Overview
                   </h2>
-                  <div className="prose prose-lg dark:prose-invert max-w-none">
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <div className="prose prose-lg prose-invert max-w-none">
+                    <p className="text-gray-300 leading-relaxed">
                       {project.overview}
                     </p>
                   </div>
@@ -189,21 +189,21 @@ const ProjectCaseStudy = async ({ params }) => {
                 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                    <h3 className="text-lg font-semibold text-white mb-3">
                       Project Details
                     </h3>
                     <div className="space-y-3">
                       <div>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Duration</span>
-                        <p className="text-gray-900 dark:text-white font-medium">{project.duration}</p>
+                        <span className="text-sm text-gray-400">Duration</span>
+                        <p className="text-white font-medium">{project.duration}</p>
                       </div>
                       <div>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Team Size</span>
-                        <p className="text-gray-900 dark:text-white font-medium">{project.teamSize}</p>
+                        <span className="text-sm text-gray-400">Team Size</span>
+                        <p className="text-white font-medium">{project.teamSize}</p>
                       </div>
                       <div>
-                        <span className="text-sm text-gray-500 dark:text-gray-400">Role</span>
-                        <p className="text-gray-900 dark:text-white font-medium">{project.role}</p>
+                        <span className="text-sm text-gray-400">Role</span>
+                        <p className="text-white font-medium">{project.role}</p>
                       </div>
                     </div>
                   </div>
@@ -214,10 +214,10 @@ const ProjectCaseStudy = async ({ params }) => {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-white dark:bg-gray-800">
+        <section className="py-16 bg-gray-800">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+              <h2 className="text-3xl font-bold text-white mb-12 text-center">
                 Key Features
               </h2>
               
@@ -230,8 +230,8 @@ const ProjectCaseStudy = async ({ params }) => {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">{feature.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                      <h3 className="font-semibold text-white mb-2">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
                     </div>
                   </div>
                 ))}
@@ -241,25 +241,25 @@ const ProjectCaseStudy = async ({ params }) => {
         </section>
 
         {/* Challenges & Solutions */}
-        <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <section className="py-16 bg-gray-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+              <h2 className="text-3xl font-bold text-white mb-12 text-center">
                 Challenges & Solutions
               </h2>
               
               <div className="space-y-8">
                 {project.challenges.map((challenge, index) => (
-                  <div key={index} className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  <div key={index} className="bg-gray-800 rounded-lg p-6 shadow-sm">
+                    <h3 className="text-xl font-semibold text-white mb-3">
                       {challenge.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    <p className="text-gray-300 mb-4">
                       {challenge.problem}
                     </p>
                     <div className="pl-4 border-l-4 border-primary">
                       <h4 className="font-medium text-primary mb-2">Solution:</h4>
-                      <p className="text-gray-600 dark:text-gray-300">
+                      <p className="text-gray-300">
                         {challenge.solution}
                       </p>
                     </div>

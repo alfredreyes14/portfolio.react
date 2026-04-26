@@ -38,7 +38,7 @@ const ProjectGallery = ({ project }) => {
   return (
     <>
       {/* Gallery Section */}
-      <section className="py-12 bg-white dark:bg-gray-800" aria-labelledby="gallery-heading">
+      <section className="py-12 bg-gray-800" aria-labelledby="gallery-heading">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 id="gallery-heading" className="sr-only">
@@ -47,7 +47,7 @@ const ProjectGallery = ({ project }) => {
             
             {/* Featured Image */}
             <div className="mb-8">
-              <figure className="relative aspect-[16/9] bg-gray-200 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg group cursor-pointer"
+              <figure className="relative aspect-[16/9] bg-gray-700 rounded-xl overflow-hidden shadow-lg group cursor-pointer"
                 onClick={() => openPreview(0)}
                 role="button"
                 tabIndex={0}
@@ -92,7 +92,7 @@ const ProjectGallery = ({ project }) => {
               {project.gallery.map((image, index) => (
                 <div key={index} className="group cursor-pointer" role="gridcell">
                   <figure 
-                    className="relative aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md hover:scale-105"
+                    className="relative aspect-square bg-gray-700 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-md hover:scale-105"
                     onClick={() => openPreview(index)}
                     role="button"
                     tabIndex={0}

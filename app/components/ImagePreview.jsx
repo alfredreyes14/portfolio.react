@@ -124,7 +124,7 @@ const ImagePreview = ({
         {/* Image display */}
         <div className="relative flex-1 flex items-center justify-center mb-2 sm:mb-6">
           <div 
-            className="relative w-full max-w-full max-h-[75vh] sm:max-h-[85vh] lg:max-h-[90vh] bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden shadow-2xl"
+            className="relative w-full max-w-full max-h-[75vh] sm:max-h-[85vh] lg:max-h-[90vh] bg-gray-800 rounded-lg overflow-hidden shadow-2xl"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
